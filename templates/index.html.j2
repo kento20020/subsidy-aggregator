@@ -144,7 +144,9 @@
 {% endblock %}
 
 {% block scripts %}
-<script src="filter.js"></script>
+{# wizard.js を filter.js より先に読み込む: filter.js が history.replaceState で
+   URL を書き換える前に wizard.js が ?wizard=1 を検出できるようにするため #}
 <script src="wizard.js"></script>
+<script src="filter.js"></script>
 <script src="visited.js"></script>
 {% endblock %}

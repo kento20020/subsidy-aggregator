@@ -115,12 +115,22 @@
     if (sortSelect && state.sort) sortSelect.value = state.sort;
   }
 
+  // URL書き換え時に保持する未知パラメータ (他JSが使うもの)
+  var FOREIGN_KEYS_TO_PRESERVE = ["wizard"];
+
   function persistState() {
     var state = readUIState();
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
     } catch (e) { /* quota full or disabled */ }
     var params = stateToParams(state);
+
+    // 自分が管理しないクエリ (例: wizard=1) は維持する
+    var existing = new URLSearchParams(window.location.search);
+    FOREIGN_KEYS_TO_PRESERVE.forEach(function (key) {
+      if (existing.has(key)) params.set(key, existing.get(key));
+    });
+
     var qs = params.toString();
     var newUrl = window.location.pathname + (qs ? "?" + qs : "") + window.location.hash;
     try {
