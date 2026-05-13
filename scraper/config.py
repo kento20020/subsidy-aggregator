@@ -23,5 +23,5 @@ ALLOWED_HOSTS = frozenset({
 JGRANTS_API_BASE = "https://api.jgrants-portal.go.jp/exp/v1/public"
 JGRANTS_SITE_BASE = "https://www.jgrants-portal.go.jp"
 
-# GitHubリポジトリURL（公開後に書き換える。未定なら # でフッター無効化）
-REPO_URL = "#"
+# GitHubリポジトリURL。フッターのOSSリンクで使用。
+REPO_URL = "https://github.com/kento20020/subsidy-aggregator"
