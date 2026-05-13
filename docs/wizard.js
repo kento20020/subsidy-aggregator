@@ -383,10 +383,17 @@
   }
 
   // ---- 初期表示判定 ----
+  // 表示する条件:
+  //   - localStorage に完了フラグが無い (初回 or リセット直後)
+  //   - もしくは URL に ?wizard=1 が付いている (デバッグ・強制起動)
+  // 共有リンクで来たらウィザードを邪魔しないように、フィルタクエリと完了フラグ
+  // の AND ではなく完了フラグのみで判定する（フィルタURLがあれば
+  // 「結果を見る」で既存URLパラメータの上に上書きされる）。
+  var params = new URLSearchParams(window.location.search);
+  var force = params.get("wizard") === "1";
   var done = false;
   try { done = !!localStorage.getItem(WIZARD_DONE_KEY); } catch (e) {}
-  // URLクエリがあれば共有リンク経由なのでウィザード出さない
-  if (!done && !window.location.search) {
+  if (force || !done) {
     show();
   }
 })();
