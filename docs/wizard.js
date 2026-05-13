@@ -215,8 +215,16 @@
       var btn = el("button", { type: "button", class: "wizard-option" + (state.answers[q.id] === opt ? " selected" : "") });
       btn.textContent = opt;
       btn.addEventListener("click", function () {
-        state.answers[q.id] = (state.answers[q.id] === opt) ? null : opt;
+        var wasSelected = state.answers[q.id] === opt;
+        state.answers[q.id] = wasSelected ? null : opt;
         renderStep();
+        // 新規選択時のみ自動で次へ。同じ項目を再クリックして解除した時は止まる。
+        if (!wasSelected) {
+          setTimeout(function () {
+            var nextBtn = modal.querySelector(".wizard-next");
+            if (nextBtn && !nextBtn.disabled) nextBtn.click();
+          }, 300);
+        }
       });
       opts.appendChild(btn);
     });
