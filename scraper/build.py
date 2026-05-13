@@ -17,7 +17,16 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 from urllib.parse import urlparse
 
-from .config import DATA_FILE, DOCS_DIR, REPO_URL, TEMPLATES_DIR, WORKER_URL
+from .config import (
+    DATA_FILE,
+    DOCS_DIR,
+    REPO_URL,
+    SITE_DESCRIPTION,
+    SITE_NAME,
+    SITE_URL,
+    TEMPLATES_DIR,
+    WORKER_URL,
+)
 from .sanitize import clean_text
 
 logger = logging.getLogger(__name__)
@@ -83,6 +92,9 @@ def run() -> int:
         "repo_url": REPO_URL,
         "worker_url": WORKER_URL,
         "worker_origin": worker_origin,
+        "site_url": SITE_URL,
+        "site_name": SITE_NAME,
+        "site_description": SITE_DESCRIPTION,
     }
 
     index_tmpl = env.get_template("index.html.j2")
@@ -94,6 +106,12 @@ def run() -> int:
     about_tmpl = env.get_template("about.html.j2")
     (DOCS_DIR / "about.html").write_text(
         about_tmpl.render(total=total, **common),
+        encoding="utf-8",
+    )
+
+    privacy_tmpl = env.get_template("privacy.html.j2")
+    (DOCS_DIR / "privacy.html").write_text(
+        privacy_tmpl.render(**common),
         encoding="utf-8",
     )
 

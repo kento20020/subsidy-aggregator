@@ -502,3 +502,18 @@ body.hide-visited .card.visited { display: none; }
 }
 
 body.wizard-open { overflow: hidden; }
+
+.footer-links {
+  font-size: 0.85rem;
+  margin-top: 8px;
+}
+.about .lead {
+  font-size: 1rem;
+  color: var(--c-text);
+  padding: 12px 16px;
+  background: #f0f6fb;
+  border-left: 3px solid var(--c-accent);
+  border-radius: var(--radius);
+  margin-bottom: 24px;
+}
+.about h3 { margin-top: 1em; font-size: 1rem; }

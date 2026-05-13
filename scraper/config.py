@@ -30,3 +30,8 @@ REPO_URL = "https://github.com/kento20020/subsidy-aggregator"
 # 空文字なら ウィザードは Worker を呼ばずキーワードマッチのみで動作する。
 # 例: "https://subsidy-interpret.your-subdomain.workers.dev/interpret"
 WORKER_URL = ""
+
+# OGP / SNS 共有用のサイトベースURL (末尾スラなし)
+SITE_URL = "https://kento20020.github.io/subsidy-aggregator"
+SITE_NAME = "補助金まとめ"
+SITE_DESCRIPTION = "公募中の補助金をAIで要点抽出してまとめた、広告なし・会員登録不要のサイト。毎朝8時自動更新。"

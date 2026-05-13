@@ -7,7 +7,26 @@
         content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'{% if worker_origin %} {{ worker_origin }}{% endif %}; frame-ancestors 'none'; base-uri 'self'; form-action 'none'">
   <meta name="referrer" content="no-referrer">
   {% if worker_url %}<meta name="subsidy-worker-url" content="{{ worker_url }}">{% endif %}
-  <title>{% block title %}補助金まとめ{% endblock %}</title>
+  <title>{% block title %}{{ site_name }}{% endblock %}</title>
+
+  {# Favicon #}
+  <link rel="icon" type="image/svg+xml" href="{{ root|default('') }}favicon.svg">
+
+  {# OGP (Open Graph Protocol) #}
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ site_name }}">
+  <meta property="og:title" content="{% block og_title %}{{ site_name }}{% endblock %}">
+  <meta property="og:description" content="{% block og_description %}{{ site_description }}{% endblock %}">
+  <meta property="og:url" content="{% block og_url %}{{ site_url }}/{% endblock %}">
+  <meta property="og:image" content="{{ site_url }}/og.png">
+  <meta property="og:locale" content="ja_JP">
+
+  {# Twitter Card #}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ self.og_title() }}">
+  <meta name="twitter:description" content="{{ self.og_description() }}">
+  <meta name="twitter:image" content="{{ site_url }}/og.png">
+
   <link rel="stylesheet" href="{{ root|default('') }}style.css">
 </head>
 <body>
@@ -37,6 +56,11 @@
     <p class="disclaimer">
       掲載情報は参考用であり、申請可否・採択を保証するものではありません。
       最新の情報は必ず各公式サイトでご確認ください。
+    </p>
+    <p class="footer-links">
+      <a href="{{ root|default('') }}about.html">このサイトについて</a> ・
+      <a href="{{ root|default('') }}privacy.html">プライバシーポリシー</a>
+      {% if repo_url and repo_url != "#" %}・ <a href="{{ repo_url }}" rel="noopener noreferrer">GitHub</a>{% endif %}
     </p>
   </footer>
 
