@@ -35,11 +35,13 @@ def _prepare_view(record: dict) -> dict:
     return {
         **record,
         "title": clean_text(record.get("title", ""), max_chars=200),
-        "summary": clean_text(record.get("summary", ""), max_chars=400),
-        "body": clean_text(record.get("body", ""), max_chars=1500),
+        "plain_summary": clean_text(record.get("plain_summary", ""), max_chars=140),
+        "body": clean_text(record.get("body", ""), max_chars=2500),
         "target_text": clean_text(record.get("target_text", ""), max_chars=200),
         "amount_text": clean_text(record.get("amount_text", ""), max_chars=100),
         "prefecture": clean_text(record.get("prefecture", ""), max_chars=20),
+        "catch_phrase": clean_text(record.get("catch_phrase", ""), max_chars=200),
+        "subsidy_rate_official": clean_text(record.get("subsidy_rate_official", ""), max_chars=50),
     }
 
 

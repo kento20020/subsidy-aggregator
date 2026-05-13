@@ -24,11 +24,14 @@ python -m scraper.scraper
 # 3. 差分検出
 python -m scraper.diff_check
 
-# 4. AIタグ付け（ANTHROPIC_API_KEY未設定なら自動モック）
+# 4. 新着・更新分の本文を詳細APIで取得
+python -m scraper.fetch_detail
+
+# 5. AI抽出（ANTHROPIC_API_KEY未設定なら自動モック）
 python -m scraper.ai_tag           # 本番
 python -m scraper.ai_tag --dry-run # 強制モック
 
-# 5. 静的サイト生成
+# 6. 静的サイト生成
 python -m scraper.build
 
 # 6. ローカルプレビュー

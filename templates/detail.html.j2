@@ -10,32 +10,71 @@
   <div class="badges">
     {% if s.is_new %}<span class="badge badge-new">新着</span>{% endif %}
     {% if s.urgency and s.urgency >= 4 %}<span class="badge badge-urgent">締切間近</span>{% endif %}
+    {% if s.difficulty %}<span class="badge badge-difficulty" title="申請難易度（1=簡易, 5=難）">難易度 {{ s.difficulty }}/5</span>{% endif %}
   </div>
+
+  {% if s.catch_phrase %}
+  <p class="catch-phrase">{{ s.catch_phrase }}</p>
+  {% endif %}
+
+  {# 3秒判定セクション: ユーザーが読まずに判定できる情報を最上部に #}
+  <section class="quick-decision" aria-label="3秒判定">
+    <h2>判断材料 <small class="ai-label">AI抽出</small></h2>
+    {% if s.tag_status == "mocked" %}
+    <p class="ai-notice">※開発用の簡易ロジックで抽出されています。本番はClaude Haikuが本文から抽出します。</p>
+    {% endif %}
+
+    {% if s.plain_summary %}
+    <p class="plain-summary">{{ s.plain_summary }}</p>
+    {% endif %}
+
+    <div class="quick-grid">
+      {% if s.concrete_targets %}
+      <div class="quick-block">
+        <h3>こんな事業者向け</h3>
+        <ul>{% for t in s.concrete_targets %}<li>{{ t }}</li>{% endfor %}</ul>
+      </div>
+      {% endif %}
+
+      {% if s.eligible_expenses %}
+      <div class="quick-block">
+        <h3>対象になる経費</h3>
+        <ul>{% for e in s.eligible_expenses %}<li>{{ e }}</li>{% endfor %}</ul>
+      </div>
+      {% endif %}
+
+      {% if s.required_documents %}
+      <div class="quick-block">
+        <h3>主な必要書類</h3>
+        <ul>{% for d in s.required_documents %}<li>{{ d }}</li>{% endfor %}</ul>
+      </div>
+      {% endif %}
+
+      {% if s.key_warnings %}
+      <div class="quick-block quick-warning">
+        <h3>⚠ 注意点</h3>
+        <ul>{% for w in s.key_warnings %}<li>{{ w }}</li>{% endfor %}</ul>
+      </div>
+      {% endif %}
+    </div>
+  </section>
 
   <table class="detail-table">
     <tbody>
-      {% if s.amount_text %}<tr><th>補助額</th><td>{{ s.amount_text }}</td></tr>{% endif %}
-      {% if s.subsidy_rate %}<tr><th>補助率</th><td>{{ s.subsidy_rate }}</td></tr>{% endif %}
-      {% if s.deadline %}<tr><th>締切</th><td>{{ s.deadline }}</td></tr>{% endif %}
+      {% if s.amount_text %}<tr><th>補助上限</th><td>{{ s.amount_text }}</td></tr>{% endif %}
+      {% if s.subsidy_rate_official %}<tr><th>補助率</th><td>{{ s.subsidy_rate_official }}</td></tr>{% endif %}
+      {% if s.deadline %}<tr><th>申請締切</th><td>{{ s.deadline }}</td></tr>{% endif %}
+      {% if s.project_end_deadline %}<tr><th>事業完了期限</th><td>{{ s.project_end_deadline }}</td></tr>{% endif %}
       {% if s.prefecture %}<tr><th>対象地域</th><td>{{ s.prefecture }}</td></tr>{% endif %}
-      {% if s.target_text %}<tr><th>対象</th><td>{{ s.target_text }}</td></tr>{% endif %}
-      {% if s.industry_tags %}<tr><th>業種</th><td>{{ s.industry_tags|join(' / ') }}<span class="ai-label">AI推定</span></td></tr>{% endif %}
-      {% if s.size_tags %}<tr><th>規模</th><td>{{ s.size_tags|join(' / ') }}<span class="ai-label">AI推定</span></td></tr>{% endif %}
-      {% if s.purpose_tags %}<tr><th>用途</th><td>{{ s.purpose_tags|join(' / ') }}<span class="ai-label">AI推定</span></td></tr>{% endif %}
+      {% if s.target_text %}<tr><th>対象規模</th><td>{{ s.target_text }}</td></tr>{% endif %}
+      {% if s.use_purpose_text %}<tr><th>用途</th><td>{{ s.use_purpose_text }}</td></tr>{% endif %}
+      {% if s.industry_tags %}<tr><th>業種フィルタ</th><td>{{ s.industry_tags|join(' / ') }}<span class="ai-label">AI推定</span></td></tr>{% endif %}
+      {% if s.size_tags %}<tr><th>規模フィルタ</th><td>{{ s.size_tags|join(' / ') }}<span class="ai-label">AI推定</span></td></tr>{% endif %}
+      {% if s.purpose_tags %}<tr><th>用途フィルタ</th><td>{{ s.purpose_tags|join(' / ') }}<span class="ai-label">AI推定</span></td></tr>{% endif %}
       <tr><th>取得元</th><td>{{ s.source }}</td></tr>
       <tr><th>最終更新</th><td>{{ s.updated_at }}</td></tr>
     </tbody>
   </table>
-
-  {% if s.summary %}
-  <section class="detail-summary">
-    <h2>要約 <small class="ai-label">AI自動生成</small></h2>
-    {% if s.tag_status == "mocked" %}
-    <p class="ai-notice">※このページのタグ・要約は開発用の簡易ロジックで生成されています。本番ではClaude Haikuによる要約に切り替わります。</p>
-    {% endif %}
-    <p>{{ s.summary }}</p>
-  </section>
-  {% endif %}
 
   {% if s.body %}
   <section class="detail-body">
@@ -45,12 +84,13 @@
   {% endif %}
 
   <p class="detail-cta">
-    <a class="btn btn-primary" href="{{ s.url }}" rel="noopener noreferrer">申請ページを公式サイトで開く →</a>
+    <a class="btn btn-primary" href="{{ s.front_url or s.url }}" rel="noopener noreferrer">申請ページを公式サイトで開く →</a>
   </p>
 
   <p class="disclaimer">
-    この情報は {{ s.source }} の公開情報を機械的に整理したものです。
+    この情報は {{ s.source }} の公開情報をAIが整理したものです。
     最終的な要件・申請可否は必ず公式サイトでご確認ください。
+    AI抽出は誤りを含む可能性があります。
   </p>
 </article>
 {% endblock %}

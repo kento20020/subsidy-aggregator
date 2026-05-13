@@ -98,12 +98,15 @@
     </ul>
     <dl class="card-meta">
       {% if s.amount_text %}<dt>補助額</dt><dd>{{ s.amount_text }}</dd>{% endif %}
-      {% if s.subsidy_rate %}<dt>補助率</dt><dd>{{ s.subsidy_rate }}</dd>{% endif %}
+      {% if s.subsidy_rate_official %}<dt>補助率</dt><dd>{{ s.subsidy_rate_official }}</dd>{% endif %}
       {% if s.deadline %}<dt>締切</dt><dd>{{ s.deadline }}</dd>{% endif %}
       {% if s.prefecture %}<dt>地域</dt><dd>{{ s.prefecture }}</dd>{% endif %}
     </dl>
-    {% if s.summary %}
-    <p class="card-summary"><span class="ai-label">AI要約</span> {{ s.summary }}</p>
+    {% if s.key_warnings %}
+    <p class="card-warning"><span class="warning-icon" aria-hidden="true">⚠</span> {{ s.key_warnings[0] }}</p>
+    {% endif %}
+    {% if s.plain_summary %}
+    <p class="card-summary"><span class="ai-label">AI要約</span> {{ s.plain_summary }}</p>
     {% endif %}
     <p class="card-actions">
       <a class="btn" href="subsidies/{{ s.id }}.html">詳細を見る →</a>

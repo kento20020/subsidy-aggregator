@@ -258,3 +258,77 @@ a:hover { text-decoration: underline; }
   margin-top: 4px;
 }
 .diff-points a { color: var(--c-accent); }
+
+/* === Phase 1.6: 3秒判定 / 警告 === */
+.card-warning {
+  margin: 4px 0;
+  padding: 6px 10px;
+  background: #fdf6e3;
+  border-left: 3px solid #d4a017;
+  font-size: 0.85rem;
+  color: #7a5a1a;
+  border-radius: 4px;
+}
+.warning-icon {
+  font-weight: bold;
+  margin-right: 4px;
+}
+.badge-difficulty {
+  background: #6a7a8a;
+  color: #fff;
+}
+.catch-phrase {
+  font-size: 1.05rem;
+  color: var(--c-muted);
+  font-style: italic;
+  margin: 8px 0 16px;
+  padding-left: 12px;
+  border-left: 3px solid var(--c-border);
+}
+.quick-decision {
+  background: #f9fafb;
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+  padding: var(--space);
+  margin: var(--space) 0;
+}
+.quick-decision h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+.plain-summary {
+  font-size: 1rem;
+  margin: 4px 0 16px;
+  padding: 8px 12px;
+  background: #fff;
+  border-radius: var(--radius);
+  border-left: 3px solid var(--c-accent);
+}
+.quick-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+.quick-block {
+  background: #fff;
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+  padding: 10px 12px;
+}
+.quick-block h3 {
+  margin: 0 0 6px;
+  font-size: 0.9rem;
+  color: var(--c-muted);
+  font-weight: 600;
+}
+.quick-block ul {
+  margin: 0;
+  padding-left: 1.2em;
+  font-size: 0.9rem;
+}
+.quick-block li { margin: 2px 0; }
+.quick-warning {
+  background: #fdf6e3;
+  border-color: #d4a017;
+}
+.quick-warning h3 { color: #7a5a1a; }

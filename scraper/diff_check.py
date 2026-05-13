@@ -41,14 +41,20 @@ def run() -> dict:
                 "updated_at": r["fetched_at"],
                 "is_new": True,
                 "tag_status": "pending",
+                # フィルタ用タグ（AIがbody由来で埋める）
                 "industry_tags": [],
                 "size_tags": [],
                 "purpose_tags": [],
-                "amount_min": 0,
-                "amount_max": 0,
-                "subsidy_rate": "",
+                # AI抽出スキーマ（fetch_detail + ai_tag で埋まる）
+                "concrete_targets": [],
+                "eligible_expenses": [],
+                "required_documents": [],
+                "key_warnings": [],
+                "plain_summary": "",
+                "difficulty": 0,
+                # 派生フィールド
                 "urgency": _calc_urgency(r.get("deadline")),
-                "summary": "",
+                "amount_max": 0,
             }
             new_count += 1
         elif prev.get("content_hash") != r["content_hash"]:

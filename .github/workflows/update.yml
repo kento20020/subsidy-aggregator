@@ -40,7 +40,10 @@ jobs:
       - name: 差分検出
         run: python -m scraper.diff_check
 
-      - name: AI タグ付け
+      - name: 詳細本文取得 (新着・更新分のみ)
+        run: python -m scraper.fetch_detail
+
+      - name: AI 抽出
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python -m scraper.ai_tag
