@@ -69,10 +69,33 @@
     <div class="filter-actions">
       <button type="button" id="reset-filters">リセット</button>
       <button type="button" id="copy-link" title="この絞り込み条件のURLをクリップボードにコピーします">この条件のURLをコピー</button>
-      <small class="persist-note">選択した条件はブラウザに自動保存されます（次回も復元）</small>
+      <a href="#" id="open-wizard" class="text-link">条件を質問形式で設定する</a>
+    </div>
+    <div class="filter-actions filter-actions-secondary">
+      <label class="unread-toggle">
+        <input type="checkbox" id="unread-only"> 未読のみ表示 <small>(既読: <span id="visited-count">0</span>件)</small>
+      </label>
+      <button type="button" id="reset-visited" class="text-button">既読をリセット</button>
+      <small class="persist-note">条件・既読履歴はブラウザに自動保存されます</small>
     </div>
   </details>
 </section>
+
+{# === オンボーディング・ウィザード (初回訪問時のみ表示) === #}
+<div id="wizard-modal" class="wizard-modal hidden" role="dialog" aria-modal="true" aria-labelledby="wizard-title">
+  <div class="wizard-overlay"></div>
+  <div class="wizard-dialog">
+    <header class="wizard-header">
+      <h2 id="wizard-title">あなたに合う補助金を絞り込みます</h2>
+      <button type="button" class="wizard-skip" aria-label="ウィザードを閉じる">スキップ ×</button>
+    </header>
+    <div class="wizard-body"><!-- JSが描画 --></div>
+    <footer class="wizard-footer">
+      <button type="button" class="wizard-back">← 戻る</button>
+      <button type="button" class="wizard-next">次へ →</button>
+    </footer>
+  </div>
+</div>
 
 <section id="results" class="card-list" aria-label="補助金一覧">
   {% for s in subsidies %}
@@ -122,4 +145,6 @@
 
 {% block scripts %}
 <script src="filter.js"></script>
+<script src="wizard.js"></script>
+<script src="visited.js"></script>
 {% endblock %}

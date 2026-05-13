@@ -3,7 +3,7 @@
 {% block title %}{{ s.title }} | 補助金まとめ{% endblock %}
 
 {% block content %}
-<article class="detail">
+<article class="detail" data-id="{{ s.id }}">
   <p class="back-link"><a href="../index.html">← 一覧に戻る</a></p>
   <h1>{{ s.title }}</h1>
 
@@ -93,4 +93,8 @@
     AI抽出は誤りを含む可能性があります。
   </p>
 </article>
+{% endblock %}
+
+{% block scripts %}
+<script src="../visited.js"></script>
 {% endblock %}

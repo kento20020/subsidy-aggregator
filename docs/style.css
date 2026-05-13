@@ -332,3 +332,173 @@ a:hover { text-decoration: underline; }
   border-color: #d4a017;
 }
 .quick-warning h3 { color: #7a5a1a; }
+
+/* === Phase 1.7: Wizard / Visited tracking === */
+
+/* 既読カードのグレーアウト */
+.card.visited {
+  opacity: 0.55;
+  position: relative;
+}
+.card.visited::after {
+  content: "既読";
+  position: absolute;
+  top: 8px; right: 8px;
+  font-size: 0.7rem;
+  background: #999;
+  color: #fff;
+  padding: 1px 8px;
+  border-radius: 999px;
+}
+body.hide-visited .card.visited { display: none; }
+
+/* 未読トグル & 既読リセット */
+.filter-actions-secondary {
+  margin-top: 4px;
+  padding-top: 6px;
+  border-top: 1px dashed var(--c-border);
+}
+.unread-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.text-button {
+  background: none;
+  border: none;
+  color: var(--c-accent);
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 2px 4px;
+}
+.text-button:hover { text-decoration: underline; }
+.text-link {
+  font-size: 0.85rem;
+  color: var(--c-accent);
+}
+
+/* ウィザード モーダル */
+.wizard-modal { position: fixed; inset: 0; z-index: 100; }
+.wizard-modal.hidden { display: none; }
+.wizard-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.wizard-dialog {
+  position: relative;
+  max-width: 640px;
+  margin: 5vh auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+  padding: 0;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+.wizard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--c-border);
+}
+.wizard-header h2 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+.wizard-skip {
+  background: none;
+  border: none;
+  font-size: 0.9rem;
+  color: var(--c-muted);
+  cursor: pointer;
+}
+.wizard-skip:hover { color: var(--c-text); }
+.wizard-body {
+  padding: 20px;
+  overflow-y: auto;
+  flex: 1;
+}
+.wizard-progress {
+  margin: 0 0 4px;
+  font-size: 0.8rem;
+  color: var(--c-muted);
+}
+.wizard-step h2 {
+  margin: 0 0 16px;
+  font-size: 1.2rem;
+}
+.wizard-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.wizard-option {
+  padding: 10px 12px;
+  font-size: 0.95rem;
+  background: #fff;
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.1s, border-color 0.1s;
+}
+.wizard-option:hover { background: #f6f7f9; }
+.wizard-option.selected {
+  background: var(--c-accent);
+  color: #fff;
+  border-color: var(--c-accent);
+}
+.wizard-free {
+  margin-top: 8px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--c-border);
+}
+.wizard-free-label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--c-muted);
+  margin-bottom: 4px;
+}
+.wizard-free-input {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 0.95rem;
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+  box-sizing: border-box;
+}
+.wizard-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 20px;
+  border-top: 1px solid var(--c-border);
+  background: #fafafa;
+  border-radius: 0 0 12px 12px;
+}
+.wizard-back,
+.wizard-next {
+  padding: 8px 16px;
+  font-size: 0.95rem;
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius);
+  background: #fff;
+  cursor: pointer;
+}
+.wizard-next {
+  background: var(--c-accent);
+  color: #fff;
+  border-color: var(--c-accent);
+  font-weight: 600;
+}
+.wizard-back:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+body.wizard-open { overflow: hidden; }

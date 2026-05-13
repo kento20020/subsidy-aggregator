@@ -1,0 +1,14 @@
+{
+  "name": "subsidy-interpret-worker",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Cloudflare Worker that interprets free-text business descriptions into subsidy filter values",
+  "main": "src/index.js",
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev"
+  },
+  "devDependencies": {
+    "wrangler": "^3.78.0"
+  }
+}

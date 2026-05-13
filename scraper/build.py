@@ -15,7 +15,9 @@ from datetime import datetime, timezone
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
-from .config import DATA_FILE, DOCS_DIR, REPO_URL, TEMPLATES_DIR
+from urllib.parse import urlparse
+
+from .config import DATA_FILE, DOCS_DIR, REPO_URL, TEMPLATES_DIR, WORKER_URL
 from .sanitize import clean_text
 
 logger = logging.getLogger(__name__)
@@ -70,7 +72,18 @@ def run() -> int:
         shutil.rmtree(subsidies_dir)
     subsidies_dir.mkdir(parents=True, exist_ok=True)
 
-    common = {"updated_at": updated_display, "repo_url": REPO_URL}
+    worker_origin = ""
+    if WORKER_URL:
+        parsed = urlparse(WORKER_URL)
+        if parsed.scheme == "https" and parsed.netloc:
+            worker_origin = f"https://{parsed.netloc}"
+
+    common = {
+        "updated_at": updated_display,
+        "repo_url": REPO_URL,
+        "worker_url": WORKER_URL,
+        "worker_origin": worker_origin,
+    }
 
     index_tmpl = env.get_template("index.html.j2")
     (DOCS_DIR / "index.html").write_text(

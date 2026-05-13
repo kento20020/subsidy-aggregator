@@ -4,8 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'">
+        content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'{% if worker_origin %} {{ worker_origin }}{% endif %}; frame-ancestors 'none'; base-uri 'self'; form-action 'none'">
   <meta name="referrer" content="no-referrer">
+  {% if worker_url %}<meta name="subsidy-worker-url" content="{{ worker_url }}">{% endif %}
   <title>{% block title %}補助金まとめ{% endblock %}</title>
   <link rel="stylesheet" href="{{ root|default('') }}style.css">
 </head>

@@ -25,3 +25,8 @@ JGRANTS_SITE_BASE = "https://www.jgrants-portal.go.jp"
 
 # GitHubリポジトリURL。フッターのOSSリンクで使用。
 REPO_URL = "https://github.com/kento20020/subsidy-aggregator"
+
+# Cloudflare Worker のエンドポイント (自由入力テキスト → フィルタ値変換)。
+# 空文字なら ウィザードは Worker を呼ばずキーワードマッチのみで動作する。
+# 例: "https://subsidy-interpret.your-subdomain.workers.dev/interpret"
+WORKER_URL = ""
