@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+
+# Secrets / 環境変数 — 絶対にコミットしない
+.env
+.env.*
+*.key
+*.pem
+.secrets/
+
+# Logs / バックアップ
+*.log
+data/*.bak
+data/*.tmp
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Claude Code personal config (settings.local.json は個人用のため共有しない)
+.claude/settings.local.json
+
+# 個人用の仮想組織ノート（このプロジェクト外の作業フォルダ）
+.company/

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>このサイトについて | 補助金まとめ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-title" href="index.html">補助金まとめ</a>
+    <nav>
+      <a href="about.html">このサイトについて</a>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<article class="about">
+  <h1>このサイトについて</h1>
+
+  <h2>何をしているサイトか</h2>
+  <p>
+    日本国内の補助金・助成金情報（現在は jGrants 公開API由来）を毎日自動で収集し、
+    見やすくまとめた静的サイトです。
+  </p>
+
+  <h2>更新頻度</h2>
+  <p>毎朝 8:00 JST に GitHub Actions が自動でデータを取得・再ビルドします。
+  最終更新: <strong>2026-05-13 11:56 UTC</strong>（50 件掲載）</p>
+
+  <h2>仕組み</h2>
+  <ul>
+    <li>jGrants 公開API から公募中の補助金一覧を取得</li>
+    <li>前回データと SHA256 ハッシュで差分検出</li>
+    <li>新着・更新分のみ AI で業種・用途・要約をタグ付け</li>
+    <li>Jinja2 で静的HTMLを生成し GitHub Pages に公開</li>
+  </ul>
+
+  <h2>免責事項</h2>
+  <ul>
+    <li>掲載情報は参考情報であり、申請可否・採択を保証するものではありません。</li>
+    <li>最新の正確な情報は必ず各公式サイトでご確認ください。</li>
+    <li>情報の誤り・欠落・遅延等による損害について責任を負いません。</li>
+  </ul>
+
+  <h2>個人情報の取扱い</h2>
+  <p>
+    本サイトはユーザー登録・ログイン機能を持たず、個人情報を取得しません。
+    アクセスログ等は GitHub Pages の標準仕様に準じます。
+  </p>
+</article>
+  </main>
+
+  <footer class="site-footer">
+    <p>最終更新: 2026-05-13 11:56 UTC</p>
+    <p>データ出典:
+      <a href="https://www.jgrants-portal.go.jp" rel="noopener noreferrer">Jグランツ（デジタル庁）</a>
+      の<a href="https://www.jgrants-portal.go.jp/open-api" rel="noopener noreferrer">公開API</a>を利用
+    </p>
+    <p class="diff-points">
+      広告なし・会員登録不要
+    </p>
+    <p class="disclaimer">
+      掲載情報は参考用であり、申請可否・採択を保証するものではありません。
+      最新の情報は必ず各公式サイトでご確認ください。
+    </p>
+  </footer>
+
+</body>
+</html>

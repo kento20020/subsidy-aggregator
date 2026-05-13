@@ -1,0 +1,1312 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>補助金まとめ（50件掲載）</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-title" href="index.html">補助金まとめ</a>
+    <nav>
+      <a href="about.html">このサイトについて</a>
+    </nav>
+  </header>
+
+  <main class="site-main">
+<section class="intro">
+  <h1>補助金まとめ</h1>
+  <p>jGrants の公募中補助金 <strong>50</strong> 件を毎日自動更新中。</p>
+</section>
+
+<section class="filters" aria-label="絞り込み">
+  <details open>
+    <summary>絞り込み</summary>
+    <div class="filter-group">
+      <span class="filter-label">業種</span>
+      <label><input type="checkbox" data-filter="industry" value="IT"> IT</label>
+      <label><input type="checkbox" data-filter="industry" value="製造業"> 製造業</label>
+      <label><input type="checkbox" data-filter="industry" value="飲食"> 飲食</label>
+      <label><input type="checkbox" data-filter="industry" value="農業"> 農業</label>
+      <label><input type="checkbox" data-filter="industry" value="建設"> 建設</label>
+      <label><input type="checkbox" data-filter="industry" value="小売"> 小売</label>
+      <label><input type="checkbox" data-filter="industry" value="医療"> 医療</label>
+      <label><input type="checkbox" data-filter="industry" value="教育"> 教育</label>
+      <label><input type="checkbox" data-filter="industry" value="全業種"> 全業種</label>
+    </div>
+    <div class="filter-group">
+      <span class="filter-label">規模</span>
+      <label><input type="checkbox" data-filter="size" value="個人事業主"> 個人事業主</label>
+      <label><input type="checkbox" data-filter="size" value="小規模事業者"> 小規模事業者</label>
+      <label><input type="checkbox" data-filter="size" value="中小企業"> 中小企業</label>
+      <label><input type="checkbox" data-filter="size" value="大企業"> 大企業</label>
+      <label><input type="checkbox" data-filter="size" value="全規模"> 全規模</label>
+    </div>
+    <div class="filter-group">
+      <span class="filter-label">用途</span>
+      <label><input type="checkbox" data-filter="purpose" value="設備投資"> 設備投資</label>
+      <label><input type="checkbox" data-filter="purpose" value="IT導入"> IT導入</label>
+      <label><input type="checkbox" data-filter="purpose" value="人材育成"> 人材育成</label>
+      <label><input type="checkbox" data-filter="purpose" value="販路開拓"> 販路開拓</label>
+      <label><input type="checkbox" data-filter="purpose" value="研究開発"> 研究開発</label>
+      <label><input type="checkbox" data-filter="purpose" value="省エネ"> 省エネ</label>
+      <label><input type="checkbox" data-filter="purpose" value="海外展開"> 海外展開</label>
+    </div>
+    <div class="filter-group">
+      <span class="filter-label">地域</span>
+      <select id="filter-prefecture">
+        <option value="all">全件</option>
+        <option value="全国">全国対象のみ</option>
+        <option value="北海道">北海道</option>
+        <option value="青森県">青森県</option>
+        <option value="岩手県">岩手県</option>
+        <option value="宮城県">宮城県</option>
+        <option value="秋田県">秋田県</option>
+        <option value="山形県">山形県</option>
+        <option value="福島県">福島県</option>
+        <option value="茨城県">茨城県</option>
+        <option value="栃木県">栃木県</option>
+        <option value="群馬県">群馬県</option>
+        <option value="埼玉県">埼玉県</option>
+        <option value="千葉県">千葉県</option>
+        <option value="東京都">東京都</option>
+        <option value="神奈川県">神奈川県</option>
+        <option value="新潟県">新潟県</option>
+        <option value="富山県">富山県</option>
+        <option value="石川県">石川県</option>
+        <option value="福井県">福井県</option>
+        <option value="山梨県">山梨県</option>
+        <option value="長野県">長野県</option>
+        <option value="岐阜県">岐阜県</option>
+        <option value="静岡県">静岡県</option>
+        <option value="愛知県">愛知県</option>
+        <option value="三重県">三重県</option>
+        <option value="滋賀県">滋賀県</option>
+        <option value="京都府">京都府</option>
+        <option value="大阪府">大阪府</option>
+        <option value="兵庫県">兵庫県</option>
+        <option value="奈良県">奈良県</option>
+        <option value="和歌山県">和歌山県</option>
+        <option value="鳥取県">鳥取県</option>
+        <option value="島根県">島根県</option>
+        <option value="岡山県">岡山県</option>
+        <option value="広島県">広島県</option>
+        <option value="山口県">山口県</option>
+        <option value="徳島県">徳島県</option>
+        <option value="香川県">香川県</option>
+        <option value="愛媛県">愛媛県</option>
+        <option value="高知県">高知県</option>
+        <option value="福岡県">福岡県</option>
+        <option value="佐賀県">佐賀県</option>
+        <option value="長崎県">長崎県</option>
+        <option value="熊本県">熊本県</option>
+        <option value="大分県">大分県</option>
+        <option value="宮崎県">宮崎県</option>
+        <option value="鹿児島県">鹿児島県</option>
+        <option value="沖縄県">沖縄県</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <span class="filter-label">締切</span>
+      <select id="filter-deadline">
+        <option value="all">全件</option>
+        <option value="7">7日以内</option>
+        <option value="14">14日以内</option>
+        <option value="30">1ヶ月以内</option>
+        <option value="90">3ヶ月以内</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <span class="filter-label">並び順</span>
+      <select id="sort-order">
+        <option value="new">新着順</option>
+        <option value="deadline">締切が近い順</option>
+        <option value="amount">補助額が多い順</option>
+      </select>
+    </div>
+    <div class="filter-actions">
+      <button type="button" id="reset-filters">リセット</button>
+      <button type="button" id="copy-link" title="この絞り込み条件のURLをクリップボードにコピーします">この条件のURLをコピー</button>
+      <small class="persist-note">選択した条件はブラウザに自動保存されます（次回も復元）</small>
+    </div>
+  </details>
+</section>
+
+<section id="results" class="card-list" aria-label="補助金一覧">
+  <article
+    class="card"
+    data-id="jgrants-S-00009099"
+    data-industry="全業種"
+    data-size="中小企業"
+    data-purpose="設備投資"
+    data-prefecture="北海道"
+    data-deadline="2026-06-04"
+    data-amount-max="716"
+    data-first-seen="2026-05-13T11:56:02.917906+00:00"
+    data-urgency="3">
+    <header class="card-head">
+<span class="badge badge-new">新着</span>      <h2 class="card-title">令和8年度_アイヌ中小企業振興対策事業費補助金</h2>
+    </header>
+    <ul class="tag-list">
+<li class="tag">全業種</li><li class="tag tag-size">中小企業</li>    </ul>
+    <dl class="card-meta">
+<dt>補助額</dt><dd>最大7,165,000円</dd><dt>補助率</dt><dd>不明</dd><dt>締切</dt><dd>2026-06-04</dd><dt>地域</dt><dd>北海道</dd>    </dl>
+    <p class="card-summary"><span class="ai-label">AI要約</span> 令和8年度_アイヌ中小企業振興対策事業費補助金（締切 2026-06-04）</p>
+    <p class="card-actions">
+      <a class="btn" href="subsidies/jgrants-S-00009099.html">詳細を見る →</a>
+    </p>
+  </article>
+  <article
+    class="card"
+    data-id="jgrants-S-00009079"
+    data-industry="全業種"
+    data-size="中小企業"
+    data-purpose="販路開拓,海外展開"
+    data-prefecture="山口県"
+    data-deadline="2026-06-11"
+    data-amount-max="300"
+    data-first-seen="2026-05-13T11:56:02.917906+00:00"
+    data-urgency="3">
+    <header class="card-head">
+<span class="badge badge-new">新着</span>      <h2 class="card-title">【山口県】令和8年度_中小企業等海外展開支援事業費補助金（海外出願支援事業）</h2>
+    </header>
+    <ul class="tag-list">
+<li class="tag">全業種</li><li class="tag tag-size">中小企業</li>    </ul>
+    <dl class="card-meta">
+<dt>補助額</dt><dd>最大3,000,000円</dd><dt>補助率</dt><dd>不明</dd><dt>締切</dt><dd>2026-06-11</dd><dt>地域</dt><dd>山口県</dd>    </dl>
+    <p class="card-summary"><span class="ai-label">AI要約</span> 【山口県】令和8年度_中小企業等海外展開支援事業費補助金（海外出願支援事業）（締切 2026-06-11）</p>
+    <p class="card-actions">
+      <a class="btn" href="subsidies/jgrants-S-00009079.html">詳細を見る →</a>
+    </p>
+  </article>
+  <article
+    class="card"
+    data-id="jgrants-S-00009095"
+    data-industry="全業種"
+    data-size="中小企業"
+    data-purpose="販路開拓,海外展開"
+    data-prefecture="島根県"
+    data-deadline="2026-05-25"
+    data-amount-max="300"
+    data-first-seen="2026-05-13T02:45:45.758075+00:00"
+    data-urgency="4">
+    <header class="card-head">
+<span class="badge badge-new">新着</span><span class="badge badge-urgent">締切間近</span>      <h2 class="card-title">【島根県】令和8年度_中小企業等海外展開支援事業費補助金（海外出願支援事業）</h2>
+    </header>
+    <ul class="tag-list">
+<li class="tag">全業種</li><li class="tag tag-size">中小企業</li>    </ul>
+    <dl class="card-meta">
+<dt>補助額</dt><dd>最大3,000,000円</dd><dt>補助率</dt><dd>不明</dd><dt>締切</dt><dd>2026-05-25</dd><dt>地域</dt><dd>島根県</dd>    </dl>
+    <p class="card-summary"><span class="ai-label">AI要約</span> 【島根県】令和8年度_中小企業等海外展開支援事業費補助金（海外出願支援事業）（締切 2026-05-25）</p>
+    <p class="card-actions">
+      <a class="btn" href="subsidies/jgrants-S-00009095.html">詳細を見る →</a>
+    </p>
+  </article>
+  <article
+    class="card"
+    data-id="jgrants-S-00009061"
+    data-industry="全業種"
+    data-size="中小企業"
+    data-purpose="設備投資"
+    data-prefecture="全国"
+    data-deadline="2026-05-29"
+    data-amount-max="1300"
+    data-first-seen="2026-05-13T02:45:45.758075+00:00"
+    data-urgency="3">
+    <header class="card-head">
+<span class="badge badge-new">新着</span>      <h2 class="card-title">令和８年度「地域の中堅・中核企業支援事業（地域の人事部支援事業）」補助事業者公募</h2>
+    </header>
+    <ul class="tag-list">
+<li class="tag">全業種</li><li class="tag tag-size">中小企業</li>    </ul>
+    <dl class="card-meta">
+<dt>補助額</dt><dd>最大13,000,000円</dd><dt>補助率</dt><dd>不明</dd><dt>締切</dt><dd>2026-05-29</dd><dt>地域</dt><dd>全国</dd>    </dl>
+    <p class="card-summary"><span class="ai-label">AI要約</span> 令和８年度「地域の中堅・中核企業支援事業（地域の人事部支援事業）」補助事業者公募（締切 2026-05-29）</p>
+    <p class="card-actions">
+      <a class="btn" href="subsidies/jgrants-S-00009061.html">詳細を見る →</a>
+    </p>
+  </article>
+  <article
+    class="card"
+    data-id="jgrants-S-00009060"
+    data-industry="全業種"
+    data-size="中小企業"
+    data-purpose="販路開拓,海外展開"
+    data-prefecture="埼玉県"
+    data-deadline="2026-06-19"
+    data-amount-max="300"
+    data-first-seen="2026-05-13T02:45:45.758075+00:00"
+    data-urgency="2">
+    <header class="card-head">
+<span class="badge badge-new">新着</span>      <h2 class="card-title">【埼玉県】令和８年度_中小企業等海外展開支援事業費補助金（海外出願支援事業）</h2>
+    </header>
+    <ul class="tag-list">
+<li class="tag">全業種</li><li class="tag tag-size">中小企業</li>    </ul>
+    <dl class="card-meta">
+<dt>補助額</dt><dd>最大3,000,000円</dd><dt>補助率</dt><dd>不明</dd><dt>締切</dt><dd>2026-06-19</dd><dt>地域</dt><dd>埼玉県</dd>    </dl>
+    <p class="card-summary"><span class="ai-label">AI要約</span> 【埼玉県】令和８年度_中小企業等海外展開支援事業費補助金（海外出願支援事業）（締切 2026-06-19）</p>
+    <p class="card-actions">
+      <a class="btn" href="subsidies/jgrants-S-00009060.html">詳細を見る →</a>
+    </p>
+  </article>
+  <article
+    class="card"
+    data-id="jgrants-S-00009057"
+    data-industry="全業種"
+    data-size="中小企業"
+    data-purpose="販路開拓,海外展開"
+    data-prefecture="和歌山県"
+    data-deadline="2026-06-19"
+    data-amount-max="300"
+    data-first-seen="2026-05-13T02:45:45.758075+00:00"
+    data-urgency="2">
+    <header class="card-head">
+<span class="badge badge-new">新着</span>      <h2 class="card-title">【わかやま産業振興財団 】令和８年度_中小企業等海外展開支援事業費補助金（海外出願支援事業）</h2>
+    </header>
+    <ul class="tag-list">
+<li class="tag">全業種</li><li class="tag tag-size">中小企業</li>    </ul>
+    <dl class="card-meta">
+<dt>補助額</dt><dd>最大3,000,000円</dd><dt>補助率</dt><dd>不明</dd><dt>締切</dt><dd>2026-06-19</dd><dt>地域</dt><dd>和歌山県</dd>    </dl>
+    <p class="card-summary"><span class="ai-label">AI要約</span> 【わかやま産業振興財団 】令和８年度_中小企業等海外展開支援事業費補助金（海外出願支援事業）（締切 2026-06-19）</p>
+    <p class="card-actions">
+      <a class="btn" href="subsidies/jgrants-S-00009057.html">詳細を見る →</a>
+    </p>
+  </article>
+  <article
+    class="card"
+    data-id="jgrants-S-00009056"
+    data-industry="全業種"
+    data-size="中小企業"
+    data-purpose="設備投資"
+    data-prefecture="東京都"
+    data-deadline="2027-03-31"
+    data-amount-max="0"
+    data-first-seen="2026-05-13T02:45:45.758075+00:00"
+    data-urgency="1">
+    <header class="card-head">
+<span class="badge badge-new">新着</span>      <h2 class="card-title">多摩市ふるさと納税を活用した資金調達支援事業補助金</h2>
+    </header>
+    <ul class="tag-list">
+<li class="tag">全業種</li><li class="tag tag-size">中小企業</li>    </ul>
+    <dl class="card-meta">
+<dt>補助額</dt><dd>最大0円</dd><dt>補助率</dt><dd>不明</dd><dt>締切</dt><dd>2027-03-31</dd><dt>地域</dt><dd>東京都</dd>    </dl>
+    <p class="card-summary"><span class="ai-label">AI要約</span> 多摩市ふるさと納税を活用した資金調達支援事業補助金（締切 2027-03-31）</p>
+    <p class="card-actions">
+      <a class="btn" href="subsidies/jgrants-S-00009056.html">詳細を見る →</a>
+    </p>
+  </article>
+  <article
+    class="card"
+    data-id="jgrants-S-00009054"
+    data-industry="全業種"
+    data-size="中小企業"
+    data-purpose="販路開拓,海外展開"
+    data-prefecture="鳥取県"
+    data-deadline="2026-06-12"
+    data-amount-max="300"
+    data-first-seen="2026-05-13T02:45:45.758075+00:00"
+    data-urgency="3">
+    <header class="card-head">
+<span class="badge badge-new">新着</span>      <h2 class="card-title">【鳥取県】令和８年度_中小企業等海外展開支援事業費補助金（海外出願支援事業）</h2>
+    </header>
+    <ul class="tag-list">
+<li class="tag">全業種</li><li class="tag tag-size">中小企業</li>    </ul>
+    <dl class="card-meta">
+<dt>補助額</dt><dd>最大3,000,000円</dd><dt>補助率</dt><dd>不明</dd><dt>締切</dt><dd>2026-06-12</dd><dt>地域</dt><dd>鳥取県</dd>    </dl>
+    <p class="card-summary"><span class="ai-label">AI要約</span> 【鳥取県】令和８年度_中小企業等海外展開支援事業費補助金（海外出願支援事業）（締切 2026-06-12）</p>
+    <p class="card-actions">
+      <a class="btn" href="subsidies/jgrants-S-00009054.html">詳細を見る →</a>
+    </p>
+  </article>
+  <article
+    class="card"
+    data-id="jgrants-S-00009047"
+    data-industry="全業種"
+    data-size="中小企業"
+    data-purpose="研究開発"
+    data-prefecture="北海道"
+    data-deadline="2026-06-19"
+    data-amount-max="300"
+    data-first-seen="2026-05-13T02:45:45.758075+00:00"
+    data-urgency="2">
+    <header class="card-head">
+<span class="badge badge-new">新着</span>      <h2 class="card-title">2026年度「中小企業競争力強化促進事業業」（市場対応型製品開発支援事業【一般】）</h2>
+    </header>
+    <ul class="tag-list">
+<li class="tag">全業種</li><li class="tag tag-size">中小企業</li>    </ul>
+    <dl class="card-meta">
+<dt>補助額</dt><dd>最大3,000,000円</dd><dt>補助率</dt><dd>不明</dd><dt>締切</dt><dd>2026-06-19</dd><dt>地域</dt><dd>北海道</dd>    </dl>
+    <p class="card-summary"><span class="ai-label">AI要約</span> 2026年度「中小企業競争力強化促進事業業」（市場対応型製品開発支援事業【一般】）（締切 2026-06-19）</p>
+    <p class="card-actions">
+      <a class="btn" href="subsidies/jgrants-S-00009047.html">詳細を見る →</a>
+    </p>
+  </article>
+  <article
+    class="card"
+    data-id="jgrants-S-00009045"
+    data-industry="全業種"
+    data-size="中小企業"
+    data-purpose="人材育成"
+    data-prefecture="北海道"
+    data-deadline="2026-06-19"
+    data-amount-max="60"
+    data-first-seen="2026-05-13T02:45:45.758075+00:00"
+    data-urgency="2">
+    <header class="card-head">
+<span class="badge badge-new">新着</span>      <h2 class="card-title">2026年度「中小企業競争力強化促進事業業」（産業人材育成支援事業【テレワーク導入】）</h2>
+    </header>
+    <ul class="tag-list">
+<li class="tag">全業種</li><li class="tag tag-size">中小企業</li>    </ul>
+    <dl class="card-meta">
+<dt>補助額</dt><dd>最大600,000円</dd><dt>補助率</dt><dd>不明</dd><dt>締切</dt><dd>2026-06-19</dd><dt>地域</dt><dd>北海道</dd>    </dl>
+    <p class="card-summary"><span class="ai-label">AI要約</span> 2026年度「中小企業競争力強化促進事業業」（産業人材育成支援事業【テレワーク導入】）（締切 2026-06-19）</p>
+    <p class="card-actions">
+      <a class="btn" href="subsidies/jgrants-S-00009045.html">詳細を見る →</a>
+    </p>
+  </article>
+  <article
+    class="card"
+    data-id="jgrants-S-00009041"
+    data-industry="全業種"
+    data-size="中小企業"
+    data-purpose="人材育成"
+    data-prefecture="北海道"
+    data-deadline="2026-06-19"
+    data-amount-max="50"
+    data-first-seen="2026-05-13T02:45:45.758075+00:00"
+    data-urgency="2">
+    <header class="card-head">
+<span class="badge badge-new">新着</span>      <h2 class="card-title">2026年度「中小企業競争力強化促進事業業」（産業人材育成支援事業【派遣】）</h2>
+    </header>
+    <ul class="tag-list">
+<li class="tag">全業種</li><li class="tag tag-size">中小企業</li>    </ul>
+    <dl class="card-meta">
+<dt>補助額</dt><dd>最大500,000円</dd><dt>補助率</dt><dd>不明</dd><dt>締切</dt><dd>2026-06-19</dd><dt>地域</dt><dd>北海道</dd>    </dl>
+    <p class="card-summary"><span class="ai-label">AI要約</span> 2026年度「中小企業競争力強化促進事業業」（産業人材育成支援事業【派遣】）（締切 2026-06-19）</p>
+    <p class="card-actions">
+      <a class="btn" href="subsidies/jgrants-S-00009041.html">詳細を見る →</a>
+    </p>
+  </article>
+  <article
+    class="card"
+    data-id="jgrants-S-00009038"
+    data-industry="全業種"
+    data-size="中小企業"
+    data-purpose="販路開拓"
+    data-prefecture="北海道"
+    data-deadline="2026-06-19"
+    data-amount-max="200"
+    data-first-seen="2026-05-13T02:45:45.758075+00:00"
+    data-urgency="2">
+    <header class="card-head">
+<span class="badge badge-new">新着</span>      <h2 class="card-title">2026年度「中小企業競争力強化促進事業業」（マーケティング支援事業）</h2>
+    </header>
+    <ul class="tag-list">
+<li class="tag">全業種</li><li class="tag tag-size">中小企業</li>    </ul>
+    <dl class="card-meta">
+<dt>補助額</dt><dd>最大2,000,000円</dd><dt>補助率</dt><dd>不明</dd><dt>締切</dt><dd>2026-06-19</dd><dt>地域</dt><dd>北海道</dd>    </dl>
+    <p class="card-summary"><span class="ai-label">AI要約</span> 2026年度「中小企業競争力強化促進事業業」（マーケティング支援事業）（締切 2026-06-19）</p>
+    <p class="card-actions">
+      <a class="btn" href="subsidies/jgrants-S-00009038.html">詳細を見る →</a>
+    </p>
+  </article>
+  <article
+    class="card"
+    data-id="jgrants-S-00009032"
+    data-industry="全業種"
+    data-size="中小企業"
+    data-purpose="販路開拓,海外展開"
+    data-prefecture="京都府"
+    data-deadline="2026-06-05"
+    data-amount-max="300"
+    data-first-seen="2026-05-13T02:45:45.758075+00:00"
+    data-urgency="3">
+    <header class="card-head">
+<span class="badge badge-new">新着</span>      <h2 class="card-title">【京都産業21】令和8年度_中小企業等海外展開支援事業費補助金（海外出願支援事業）</h2>
+    </header>
+    <ul class="tag-list">
+<li class="tag">全業種</li><li class="tag tag-size">中小企業</li>    </ul>
+    <dl class="card-meta">
+<dt>補助額</dt><dd>最大3,000,000円</dd><dt>補助率</dt><dd>不明</dd><dt>締切</dt><dd>2026-06-05</dd><dt>地域</dt><dd>京都府</dd>    </dl>
+    <p class="card-summary"><span class="ai-label">AI要約</span> 【京都産業21】令和8年度_中小企業等海外展開支援事業費補助金（海外出願支援事業）（締切 2026-06-05）</p>
+    <p class="card-actions">
+      <a class="btn" href="subsidies/jgrants-S-00009032.html">詳細を見る →</a>
+    </p>
+  </article>
+  <article
+    class="card"
+    data-id="jgrants-S-00009030"
+    data-industry="全業種"
+    data-size="中小企業"
+    data-purpose="販路開拓,海外展開"
+    data-prefecture="滋賀県"
+    data-deadline="2026-06-02"
+    data-amount-max="300"
+    data-first-seen="2026-05-13T02:45:45.758075+00:00"
+    data-urgency="3">
+    <header class="card-head">
+<span class="badge badge-new">新着</span>      <h2 class="card-title">【滋賀県産業支援プラザ】令和8年度_中小企業等海外展開支援事業費補助金（海外出願支援事業）</h2>
+    </header>
+    <ul class="tag-list">
+<li class="tag">全業種</li><li class="tag tag-size">中小企業</li>    </ul>
+    <dl class="card-meta">
+<dt>補助額</dt><dd>最大3,000,000円</dd><dt>補助率</dt><dd>不明</dd><dt>締切</dt><dd>2026-06-02</dd><dt>地域</dt><dd>滋賀県</dd>    </dl>
+    <p class="card-summary"><span class="ai-label">AI要約</span> 【滋賀県産業支援プラザ】令和8年度_中小企業等海外展開支援事業費補助金（海外出願支援事業）（締切 2026-06-02）</p>
+    <p class="card-actions">
+      <a class="btn" href="subsidies/jgrants-S-00009030.html">詳細を見る →</a>
+    </p>
+  </article>
+  <article
+    class="card"
+    data-id="jgrants-S-00009029"
+    data-industry="全業種"
+    data-size="中小企業"
+    data-purpose="販路開拓,海外展開"
+    data-prefecture="福井県"
+    data-deadline="2026-06-12"
+    data-amount-max="300"
+    data-first-seen="2026-05-13T02:45:45.758075+00:00"
+    data-urgency="3">
+    <header class="card-head">
+<span class="badge badge-new">新着</span>      <h2 class="card-title">【ふくい産業支援センター】令和８年度_中小企業等海外展開支援事業費補助金（海外出願支援事業）</h2>
+    </header>
+    <ul class="tag-list">
+<li class="tag">全業種</li><li class="tag tag-size">中小企業</li>    </ul>
+    <dl class="card-meta">
+<dt>補助額</dt><dd>最大3,000,000円</dd><dt>補助率</dt><dd>不明</dd><dt>締切</dt><dd>2026-06-12</dd><dt>地域</dt><dd>福井県</dd>    </dl>
+    <p class="card-summary"><span class="ai-label">AI要約</span> 【ふくい産業支援センター】令和８年度_中小企業等海外展開支援事業費補助金（海外出願支援事業）（締切 2026-06-12）</p>
+    <p class="card-actions">
+      <a class="btn" href="subsidies/jgrants-S-00009029.html">詳細を見る →</a>
+    </p>
+  </article>
+  <article
+    class="card"
+    data-id="jgrants-S-00009015"
+    data-industry="全業種"
+    data-size="中小企業"
+    data-purpose="販路開拓,海外展開"
+    data-prefecture="全国"
+    data-deadline="2026-05-25"
+    data-amount-max="0"
+    data-first-seen="2026-05-13T02:45:45.758075+00:00"
+    data-urgency="4">
+    <header class="card-head">
+<span class="badge badge-new">新着</span><span class="badge badge-urgent">締切間近</span>      <h2 class="card-title">【農林水産省】食品等物流合理化緊急対策事業のうち輸出物流構築事業（間接補助事業者公募）</h2>
+    </header>
+    <ul class="tag-list">
+<li class="tag">全業種</li><li class="tag tag-size">中小企業</li>    </ul>
+    <dl class="card-meta">
+<dt>補助額</dt><dd>最大0円</dd><dt>補助率</dt><dd>不明</dd><dt>締切</dt><dd>2026-05-25</dd><dt>地域</dt><dd>全国</dd>    </dl>
+    <p class="card-summary"><span class="ai-label">AI要約</span> 【農林水産省】食品等物流合理化緊急対策事業のうち輸出物流構築事業（間接補助事業者公募）（締切 2026-05-25）</p>
+    <p class="card-actions">
+      <a class="btn" href="subsidies/jgrants-S-00009015.html">詳細を見る →</a>
+    </p>
+  </article>
+  <article
+    class="card"
+    data-id="jgrants-S-00009014"
+    data-industry="全業種"
+    data-size="中小企業"
+    data-purpose="設備投資"
+    data-prefecture="全国"
+    data-deadline="2026-05-25"
+    data-amount-max="0"
+    data-first-seen="2026-05-13T02:45:45.758075+00:00"
+    data-urgency="4">
+    <header class="card-head">
+<span class="badge badge-new">新着</span><span class="badge badge-urgent">締切間近</span>      <h2 class="card-title">【農林水産省】食品等物流合理化緊急対策事業のうち物流生産性向上推進事業（間接補助事業者公募）</h2>
+    </header>
+    <ul class="tag-list">
+<li class="tag">全業種</li><li class="tag tag-size">中小企業</li>    </ul>
+    <dl class="card-meta">
+<dt>補助額</dt><dd>最大0円</dd><dt>補助率</dt><dd>不明</dd><dt>締切</dt><dd>2026-05-25</dd><dt>地域</dt><dd>全国</dd>    </dl>
+    <p class="card-summary"><span class="ai-label">AI要約</span> 【農林水産省】食品等物流合理化緊急対策事業のうち物流生産性向上推進事業（間接補助事業者公募）（締切 2026-05-25）</p>
+    <p class="card-actions">
+      <a class="btn" href="subsidies/jgrants-S-00009014.html">詳細を見る →</a>
+    </p>
+  </article>
+  <article
+    class="card"
+    data-id="jgrants-S-00009011"
+    data-industry="全業種"
+    data-size="中小企業"
+    data-purpose="人材育成"
+    data-prefecture="東京都"
+    data-deadline="2029-03-31"
+    data-amount-max="300"
+    data-first-seen="2026-05-13T02:45:45.758075+00:00"
+    data-urgency="1">
+    <header class="card-head">
+<span class="badge badge-new">新着</span>      <h2 class="card-title">令和8年度【2年目申請用】ES（社員満足度）向上による若手人材確保・定着事業助成金</h2>
+    </header>
+    <ul class="tag-list">
+<li class="tag">全業種</li><li class="tag tag-size">中小企業</li>    </ul>
+    <dl class="card-meta">
+<dt>補助額</dt><dd>最大3,000,000円</dd><dt>補助率</dt><dd>不明</dd><dt>締切</dt><dd>2029-03-31</dd><dt>地域</dt><dd>東京都</dd>    </dl>
+    <p class="card-summary"><span class="ai-label">AI要約</span> 令和8年度【2年目申請用】ES（社員満足度）向上による若手人材確保・定着事業助成金（締切 2029-03-31）</p>
+    <p class="card-actions">
+      <a class="btn" href="subsidies/jgrants-S-00009011.html">詳細を見る →</a>
+    </p>
+  </article>
+  <article
+    class="card"
+    data-id="jgrants-S-00009009"
+    data-industry="全業種"
+    data-size="中小企業"
+    data-purpose="人材育成"
+    data-prefecture="東京都"
+    data-deadline="2029-03-31"
+    data-amount-max="300"
+    data-first-seen="2026-05-13T02:45:45.758075+00:00"
+    data-urgency="1">
+    <header class="card-head">
+<span class="badge badge-new">新着</span>      <h2 class="card-title">令和8年度【3年目申請用】ES（社員満足度）向上による若手人材確保・定着事業助成金</h2>
+    </header>
+    <ul class="tag-list">
+<li class="tag">全業種</li><li class="tag tag-size">中小企業</li>    </ul>
+    <dl class="card-meta">
+<dt>補助額</dt><dd>最大3,000,000円</dd><dt>補助率</dt><dd>不明</dd><dt>締切</dt><dd>2029-03-31</dd><dt>地域</dt><dd>東京都</dd>    </dl>
+    <p class="card-summary"><span class="ai-label">AI要約</span> 令和8年度【3年目申請用】ES（社員満足度）向上による若手人材確保・定着事業助成金（締切 2029-03-31）</p>
+    <p class="card-actions">
+      <a class="btn" href="subsidies/jgrants-S-00009009.html">詳細を見る →</a>
+    </p>
+  </article>
+  <article
+    class="card"
+    data-id="jgrants-S-00008999"
+    data-industry="全業種"
+    data-size="中小企業"
+    data-purpose="販路開拓,海外展開"
+    data-prefecture="千葉県"
+    data-deadline="2026-06-05"
+    data-amount-max="300"
+    data-first-seen="2026-05-13T02:45:45.758075+00:00"
+    data-urgency="3">
+    <header class="card-head">
+<span class="badge badge-new">新着</span>      <h2 class="card-title">【千葉県】令和８年度「中小企業等海外展開支援事業費補助金（海外出願支援事業）」</h2>
+    </header>
+    <ul class="tag-list">
+<li class="tag">全業種</li><li class="tag tag-size">中小企業</li>    </ul>
+    <dl class="card-meta">
+<dt>補助額</dt><dd>最大3,000,000円</dd><dt>補助率</dt><dd>不明</dd><dt>締切</dt><dd>2026-06-05</dd><dt>地域</dt><dd>千葉県</dd>    </dl>
+    <p class="card-summary"><span class="ai-label">AI要約</span> 【千葉県】令和８年度「中小企業等海外展開支援事業費補助金（海外出願支援事業）」（締切 2026-06-05）</p>
+    <p class="card-actions">
+      <a class="btn" href="subsidies/jgrants-S-00008999.html">詳細を見る →</a>
+    </p>
+  </article>
+  <article
+    class="card"
+    data-id="jgrants-S-00008989"
+    data-industry="製造業"
+    data-size="中小企業"
+    data-purpose="設備投資"
+    data-prefecture="全国"
+    data-deadline="2027-06-30"
+    data-amount-max="0"
+    data-first-seen="2026-05-13T02:45:45.758075+00:00"
+    data-urgency="1">
+    <header class="card-head">
+<span class="badge badge-new">新着</span>      <h2 class="card-title">【経済産業省】ものづくり・商業・サービス生産性向上促進補助金（22次締切）</h2>
+    </header>
+    <ul class="tag-list">
+<li class="tag">製造業</li><li class="tag tag-size">中小企業</li>    </ul>
+    <dl class="card-meta">
+<dt>補助額</dt><dd>最大0円</dd><dt>補助率</dt><dd>不明</dd><dt>締切</dt><dd>2027-06-30</dd><dt>地域</dt><dd>全国</dd>    </dl>
+    <p class="card-summary"><span class="ai-label">AI要約</span> 【経済産業省】ものづくり・商業・サービス生産性向上促進補助金（22次締切）（締切 2027-06-30）</p>
+    <p class="card-actions">
+      <a class="btn" href="subsidies/jgrants-S-00008989.html">詳細を見る →</a>
+    </p>
+  </article>
+  <article
+    class="card"
+    data-id="jgrants-S-00008982"
+    data-industry="全業種"
+    data-size="中小企業"
+    data-purpose="省エネ"
+    data-prefecture="全国"
+    data-deadline="2026-06-10"
+    data-amount-max="276600"
+    data-first-seen="2026-05-13T02:45:45.758075+00:00"
+    data-urgency="3">
+    <header class="card-head">
+<span class="badge badge-new">新着</span>      <h2 class="card-title">令和8年度「GX戦略地域制度におけるコンビナート等再生に向けた 事業化促進事業」に係る間接補助事業者の公募</h2>
+    </header>
+    <ul class="tag-list">
+<li class="tag">全業種</li><li class="tag tag-size">中小企業</li>    </ul>
+    <dl class="card-meta">
+<dt>補助額</dt><dd>最大2,766,000,000円</dd><dt>補助率</dt><dd>不明</dd><dt>締切</dt><dd>2026-06-10</dd><dt>地域</dt><dd>全国</dd>    </dl>
+    <p class="card-summary"><span class="ai-label">AI要約</span> 令和8年度「GX戦略地域制度におけるコンビナート等再生に向けた 事業化促進事業」に係る間接補助事業者の公募（締切 2026-06-10）</p>
+    <p class="card-actions">
+      <a class="btn" href="subsidies/jgrants-S-00008982.html">詳細を見る →</a>
+    </p>
+  </article>
+  <article
+    class="card"
+    data-id="jgrants-S-00008981"
+    data-industry="全業種"
+    data-size="中小企業"
+    data-purpose="設備投資"
+    data-prefecture="全国"
+    data-deadline="2026-06-02"
+    data-amount-max="0"
+    data-first-seen="2026-05-13T02:45:45.758075+00:00"
+    data-urgency="3">
+    <header class="card-head">
+<span class="badge badge-new">新着</span>      <h2 class="card-title">【令和８年度当初】国立公園等多言語解説等整備事業（国立公園等資源整備事業費補助金）</h2>
+    </header>
+    <ul class="tag-list">
+<li class="tag">全業種</li><li class="tag tag-size">中小企業</li>    </ul>
+    <dl class="card-meta">
+<dt>補助額</dt><dd>最大0円</dd><dt>補助率</dt><dd>不明</dd><dt>締切</dt><dd>2026-06-02</dd><dt>地域</dt><dd>全国</dd>    </dl>
+    <p class="card-summary"><span class="ai-label">AI要約</span> 【令和８年度当初】国立公園等多言語解説等整備事業（国立公園等資源整備事業費補助金）（締切 2026-06-02）</p>
+    <p class="card-actions">
+      <a class="btn" href="subsidies/jgrants-S-00008981.html">詳細を見る →</a>
+    </p>
+  </article>
+  <article
+    class="card"
+    data-id="jgrants-S-00008980"
+    data-industry="全業種"
+    data-size="中小企業"
+    data-purpose="省エネ"
+    data-prefecture="全国"
+    data-deadline="2026-06-10"
+    data-amount-max="0"
+    data-first-seen="2026-05-13T02:45:45.758075+00:00"
+    data-urgency="3">
+    <header class="card-head">
+<span class="badge badge-new">新着</span>      <h2 class="card-title">【事前着手届出】令和８年度GX戦略地域制度におけるコンビナート等再生に向けた事業化促進事業（コンビナート等再生Pre-FEED補助金）</h2>
+    </header>
+    <ul class="tag-list">
+<li class="tag">全業種</li><li class="tag tag-size">中小企業</li>    </ul>
+    <dl class="card-meta">
+<dt>補助額</dt><dd>最大0円</dd><dt>補助率</dt><dd>不明</dd><dt>締切</dt><dd>2026-06-10</dd><dt>地域</dt><dd>全国</dd>    </dl>
+    <p class="card-summary"><span class="ai-label">AI要約</span> 【事前着手届出】令和８年度GX戦略地域制度におけるコンビナート等再生に向けた事業化促進事業（コンビナート等再生Pre-FEED補助金）（締切 2026-06-10）</p>
+    <p class="card-actions">
+      <a class="btn" href="subsidies/jgrants-S-00008980.html">詳細を見る →</a>
+    </p>
+  </article>
+  <article
+    class="card"
+    data-id="jgrants-S-00008971"
+    data-industry="全業種"
+    data-size="中小企業"
+    data-purpose="設備投資"
+    data-prefecture="福島県"
+    data-deadline="2026-06-12"
+    data-amount-max="0"
+    data-first-seen="2026-05-13T02:45:45.758075+00:00"
+    data-urgency="3">
+    <header class="card-head">
+<span class="badge badge-new">新着</span>      <h2 class="card-title">福島県中小企業特別高圧電気料金支援補助金</h2>
+    </header>
+    <ul class="tag-list">
+<li class="tag">全業種</li><li class="tag tag-size">中小企業</li>    </ul>
+    <dl class="card-meta">
+<dt>補助額</dt><dd>最大0円</dd><dt>補助率</dt><dd>不明</dd><dt>締切</dt><dd>2026-06-12</dd><dt>地域</dt><dd>福島県</dd>    </dl>
+    <p class="card-summary"><span class="ai-label">AI要約</span> 福島県中小企業特別高圧電気料金支援補助金（締切 2026-06-12）</p>
+    <p class="card-actions">
+      <a class="btn" href="subsidies/jgrants-S-00008971.html">詳細を見る →</a>
+    </p>
+  </article>
+  <article
+    class="card"
+    data-id="jgrants-S-00008969"
+    data-industry="全業種"
+    data-size="中小企業"
+    data-purpose="海外展開"
+    data-prefecture="北海道"
+    data-deadline="2026-06-05"
+    data-amount-max="300"
+    data-first-seen="2026-05-13T02:45:45.758075+00:00"
+    data-urgency="3">
+    <header class="card-head">
+<span class="badge badge-new">新着</span>      <h2 class="card-title">2026年度「海外出願支援事業」</h2>
+    </header>
+    <ul class="tag-list">
+<li class="tag">全業種</li><li class="tag tag-size">中小企業</li>    </ul>
+    <dl class="card-meta">
+<dt>補助額</dt><dd>最大3,000,000円</dd><dt>補助率</dt><dd>不明</dd><dt>締切</dt><dd>2026-06-05</dd><dt>地域</dt><dd>北海道</dd>    </dl>
+    <p class="card-summary"><span class="ai-label">AI要約</span> 2026年度「海外出願支援事業」（締切 2026-06-05）</p>
+    <p class="card-actions">
+      <a class="btn" href="subsidies/jgrants-S-00008969.html">詳細を見る →</a>
+    </p>
+  </article>
+  <article
+    class="card"
+    data-id="jgrants-S-00008944"
+    data-industry="全業種"
+    data-size="中小企業"
+    data-purpose="設備投資"
+    data-prefecture="福岡県"
+    data-deadline="2026-11-30"
+    data-amount-max="450"
+    data-first-seen="2026-05-13T02:45:45.758075+00:00"
+    data-urgency="1">
+    <header class="card-head">
+<span class="badge badge-new">新着</span>      <h2 class="card-title">古賀市中小企業等向け太陽光発電設備導入補助金</h2>
+    </header>
+    <ul class="tag-list">
+<li class="tag">全業種</li><li class="tag tag-size">中小企業</li>    </ul>
+    <dl class="card-meta">
+<dt>補助額</dt><dd>最大4,500,000円</dd><dt>補助率</dt><dd>不明</dd><dt>締切</dt><dd>2026-11-30</dd><dt>地域</dt><dd>福岡県</dd>    </dl>
+    <p class="card-summary"><span class="ai-label">AI要約</span> 古賀市中小企業等向け太陽光発電設備導入補助金（締切 2026-11-30）</p>
+    <p class="card-actions">
+      <a class="btn" href="subsidies/jgrants-S-00008944.html">詳細を見る →</a>
+    </p>
+  </article>
+  <article
+    class="card"
+    data-id="jgrants-S-00008943"
+    data-industry="全業種"
+    data-size="中小企業"
+    data-purpose="IT導入"
+    data-prefecture="福岡県"
+    data-deadline="2027-03-31"
+    data-amount-max="15"
+    data-first-seen="2026-05-13T02:45:45.758075+00:00"
+    data-urgency="1">
+    <header class="card-head">
+<span class="badge badge-new">新着</span>      <h2 class="card-title">古賀市温室効果ガス排出量可視化システム導入費補助金</h2>
+    </header>
+    <ul class="tag-list">
+<li class="tag">全業種</li><li class="tag tag-size">中小企業</li>    </ul>
+    <dl class="card-meta">
+<dt>補助額</dt><dd>最大150,000円</dd><dt>補助率</dt><dd>不明</dd><dt>締切</dt><dd>2027-03-31</dd><dt>地域</dt><dd>福岡県</dd>    </dl>
+    <p class="card-summary"><span class="ai-label">AI要約</span> 古賀市温室効果ガス排出量可視化システム導入費補助金（締切 2027-03-31）</p>
+    <p class="card-actions">
+      <a class="btn" href="subsidies/jgrants-S-00008943.html">詳細を見る →</a>
+    </p>
+  </article>
+  <article
+    class="card"
+    data-id="jgrants-S-00008921"
+    data-industry="全業種"
+    data-size="中小企業"
+    data-purpose="販路開拓,海外展開"
+    data-prefecture="愛知県"
+    data-deadline="2026-06-10"
+    data-amount-max="300"
+    data-first-seen="2026-05-13T02:45:45.758075+00:00"
+    data-urgency="3">
+    <header class="card-head">
+<span class="badge badge-new">新着</span>      <h2 class="card-title">【愛知県】令和８年度_中小企業等海外展開支援事業費補助金（海外出願支援事業）</h2>
+    </header>
+    <ul class="tag-list">
+<li class="tag">全業種</li><li class="tag tag-size">中小企業</li>    </ul>
+    <dl class="card-meta">
+<dt>補助額</dt><dd>最大3,000,000円</dd><dt>補助率</dt><dd>不明</dd><dt>締切</dt><dd>2026-06-10</dd><dt>地域</dt><dd>愛知県</dd>    </dl>
+    <p class="card-summary"><span class="ai-label">AI要約</span> 【愛知県】令和８年度_中小企業等海外展開支援事業費補助金（海外出願支援事業）（締切 2026-06-10）</p>
+    <p class="card-actions">
+      <a class="btn" href="subsidies/jgrants-S-00008921.html">詳細を見る →</a>
+    </p>
+  </article>
+  <article
+    class="card"
+    data-id="jgrants-S-00008920"
+    data-industry="全業種"
+    data-size="中小企業"
+    data-purpose="設備投資"
+    data-prefecture="全国"
+    data-deadline="2026-05-21"
+    data-amount-max="0"
+    data-first-seen="2026-05-13T02:45:45.758075+00:00"
+    data-urgency="5">
+    <header class="card-head">
+<span class="badge badge-new">新着</span><span class="badge badge-urgent">締切間近</span>      <h2 class="card-title">令和８年度ヘルスケア産業国際展開推進事業費補助金</h2>
+    </header>
+    <ul class="tag-list">
+<li class="tag">全業種</li><li class="tag tag-size">中小企業</li>    </ul>
+    <dl class="card-meta">
+<dt>補助額</dt><dd>最大0円</dd><dt>補助率</dt><dd>不明</dd><dt>締切</dt><dd>2026-05-21</dd><dt>地域</dt><dd>全国</dd>    </dl>
+    <p class="card-summary"><span class="ai-label">AI要約</span> 令和８年度ヘルスケア産業国際展開推進事業費補助金（締切 2026-05-21）</p>
+    <p class="card-actions">
+      <a class="btn" href="subsidies/jgrants-S-00008920.html">詳細を見る →</a>
+    </p>
+  </article>
+  <article
+    class="card"
+    data-id="jgrants-S-00008919"
+    data-industry="全業種"
+    data-size="中小企業"
+    data-purpose="販路開拓,海外展開"
+    data-prefecture="奈良県"
+    data-deadline="2026-05-27"
+    data-amount-max="300"
+    data-first-seen="2026-05-13T02:45:45.758075+00:00"
+    data-urgency="4">
+    <header class="card-head">
+<span class="badge badge-new">新着</span><span class="badge badge-urgent">締切間近</span>      <h2 class="card-title">【奈良県地域産業振興センター】令和8年度_中小企業等海外展開支援事業費補助金（海外出願支援事業）</h2>
+    </header>
+    <ul class="tag-list">
+<li class="tag">全業種</li><li class="tag tag-size">中小企業</li>    </ul>
+    <dl class="card-meta">
+<dt>補助額</dt><dd>最大3,000,000円</dd><dt>補助率</dt><dd>不明</dd><dt>締切</dt><dd>2026-05-27</dd><dt>地域</dt><dd>奈良県</dd>    </dl>
+    <p class="card-summary"><span class="ai-label">AI要約</span> 【奈良県地域産業振興センター】令和8年度_中小企業等海外展開支援事業費補助金（海外出願支援事業）（締切 2026-05-27）</p>
+    <p class="card-actions">
+      <a class="btn" href="subsidies/jgrants-S-00008919.html">詳細を見る →</a>
+    </p>
+  </article>
+  <article
+    class="card"
+    data-id="jgrants-S-00008918"
+    data-industry="全業種"
+    data-size="中小企業"
+    data-purpose="販路開拓,海外展開"
+    data-prefecture="福岡県"
+    data-deadline="2026-06-12"
+    data-amount-max="300"
+    data-first-seen="2026-05-13T02:45:45.758075+00:00"
+    data-urgency="3">
+    <header class="card-head">
+<span class="badge badge-new">新着</span>      <h2 class="card-title">【福岡県】令和8年度_中小企業等海外展開支援事業費補助金（海外出願支援事業）</h2>
+    </header>
+    <ul class="tag-list">
+<li class="tag">全業種</li><li class="tag tag-size">中小企業</li>    </ul>
+    <dl class="card-meta">
+<dt>補助額</dt><dd>最大3,000,000円</dd><dt>補助率</dt><dd>不明</dd><dt>締切</dt><dd>2026-06-12</dd><dt>地域</dt><dd>福岡県</dd>    </dl>
+    <p class="card-summary"><span class="ai-label">AI要約</span> 【福岡県】令和8年度_中小企業等海外展開支援事業費補助金（海外出願支援事業）（締切 2026-06-12）</p>
+    <p class="card-actions">
+      <a class="btn" href="subsidies/jgrants-S-00008918.html">詳細を見る →</a>
+    </p>
+  </article>
+  <article
+    class="card"
+    data-id="jgrants-S-00008910"
+    data-industry="全業種"
+    data-size="中小企業"
+    data-purpose="設備投資"
+    data-prefecture="全国"
+    data-deadline="2026-06-02"
+    data-amount-max="0"
+    data-first-seen="2026-05-13T02:45:45.758075+00:00"
+    data-urgency="3">
+    <header class="card-head">
+<span class="badge badge-new">新着</span>      <h2 class="card-title">【令和８年度当初】国立公園等利用拠点滞在環境等上質化事業（国立公園等資源整備事業費補助金）</h2>
+    </header>
+    <ul class="tag-list">
+<li class="tag">全業種</li><li class="tag tag-size">中小企業</li>    </ul>
+    <dl class="card-meta">
+<dt>補助額</dt><dd>最大0円</dd><dt>補助率</dt><dd>不明</dd><dt>締切</dt><dd>2026-06-02</dd><dt>地域</dt><dd>全国</dd>    </dl>
+    <p class="card-summary"><span class="ai-label">AI要約</span> 【令和８年度当初】国立公園等利用拠点滞在環境等上質化事業（国立公園等資源整備事業費補助金）（締切 2026-06-02）</p>
+    <p class="card-actions">
+      <a class="btn" href="subsidies/jgrants-S-00008910.html">詳細を見る →</a>
+    </p>
+  </article>
+  <article
+    class="card"
+    data-id="jgrants-S-00008905"
+    data-industry="全業種"
+    data-size="中小企業"
+    data-purpose="設備投資"
+    data-prefecture="山口県"
+    data-deadline="2026-06-05"
+    data-amount-max="1000"
+    data-first-seen="2026-05-13T02:45:45.758075+00:00"
+    data-urgency="3">
+    <header class="card-head">
+<span class="badge badge-new">新着</span>      <h2 class="card-title">やまぐち自動車産業電動化イノベーション等促進補助金</h2>
+    </header>
+    <ul class="tag-list">
+<li class="tag">全業種</li><li class="tag tag-size">中小企業</li>    </ul>
+    <dl class="card-meta">
+<dt>補助額</dt><dd>最大10,000,000円</dd><dt>補助率</dt><dd>不明</dd><dt>締切</dt><dd>2026-06-05</dd><dt>地域</dt><dd>山口県</dd>    </dl>
+    <p class="card-summary"><span class="ai-label">AI要約</span> やまぐち自動車産業電動化イノベーション等促進補助金（締切 2026-06-05）</p>
+    <p class="card-actions">
+      <a class="btn" href="subsidies/jgrants-S-00008905.html">詳細を見る →</a>
+    </p>
+  </article>
+  <article
+    class="card"
+    data-id="jgrants-S-00008904"
+    data-industry="全業種"
+    data-size="中小企業"
+    data-purpose="設備投資"
+    data-prefecture="山口県"
+    data-deadline="2026-06-05"
+    data-amount-max="3000"
+    data-first-seen="2026-05-13T02:45:45.758075+00:00"
+    data-urgency="3">
+    <header class="card-head">
+<span class="badge badge-new">新着</span>      <h2 class="card-title">やまぐち自動車産業電動化イノベーション等促進補助金</h2>
+    </header>
+    <ul class="tag-list">
+<li class="tag">全業種</li><li class="tag tag-size">中小企業</li>    </ul>
+    <dl class="card-meta">
+<dt>補助額</dt><dd>最大30,000,000円</dd><dt>補助率</dt><dd>不明</dd><dt>締切</dt><dd>2026-06-05</dd><dt>地域</dt><dd>山口県</dd>    </dl>
+    <p class="card-summary"><span class="ai-label">AI要約</span> やまぐち自動車産業電動化イノベーション等促進補助金（締切 2026-06-05）</p>
+    <p class="card-actions">
+      <a class="btn" href="subsidies/jgrants-S-00008904.html">詳細を見る →</a>
+    </p>
+  </article>
+  <article
+    class="card"
+    data-id="jgrants-S-00008888"
+    data-industry="全業種"
+    data-size="中小企業"
+    data-purpose="販路開拓,海外展開"
+    data-prefecture="岐阜県"
+    data-deadline="2026-06-30"
+    data-amount-max="300"
+    data-first-seen="2026-05-13T02:45:45.758075+00:00"
+    data-urgency="2">
+    <header class="card-head">
+<span class="badge badge-new">新着</span>      <h2 class="card-title">【岐阜県】令和８年度_中小企業等海外展開支援事業費補助金（海外出願支援事業）</h2>
+    </header>
+    <ul class="tag-list">
+<li class="tag">全業種</li><li class="tag tag-size">中小企業</li>    </ul>
+    <dl class="card-meta">
+<dt>補助額</dt><dd>最大3,000,000円</dd><dt>補助率</dt><dd>不明</dd><dt>締切</dt><dd>2026-06-30</dd><dt>地域</dt><dd>岐阜県</dd>    </dl>
+    <p class="card-summary"><span class="ai-label">AI要約</span> 【岐阜県】令和８年度_中小企業等海外展開支援事業費補助金（海外出願支援事業）（締切 2026-06-30）</p>
+    <p class="card-actions">
+      <a class="btn" href="subsidies/jgrants-S-00008888.html">詳細を見る →</a>
+    </p>
+  </article>
+  <article
+    class="card"
+    data-id="jgrants-S-00008881"
+    data-industry="全業種"
+    data-size="中小企業"
+    data-purpose="設備投資"
+    data-prefecture="全国"
+    data-deadline="2026-09-29"
+    data-amount-max="147435"
+    data-first-seen="2026-05-13T02:45:45.758075+00:00"
+    data-urgency="1">
+    <header class="card-head">
+<span class="badge badge-new">新着</span>      <h2 class="card-title">令和８年度 水力発電導入促進支援事業費補助金（既存設備有効活用強化支援事業）公募</h2>
+    </header>
+    <ul class="tag-list">
+<li class="tag">全業種</li><li class="tag tag-size">中小企業</li>    </ul>
+    <dl class="card-meta">
+<dt>補助額</dt><dd>最大1,474,350,000円</dd><dt>補助率</dt><dd>不明</dd><dt>締切</dt><dd>2026-09-29</dd><dt>地域</dt><dd>全国</dd>    </dl>
+    <p class="card-summary"><span class="ai-label">AI要約</span> 令和８年度 水力発電導入促進支援事業費補助金（既存設備有効活用強化支援事業）公募（締切 2026-09-29）</p>
+    <p class="card-actions">
+      <a class="btn" href="subsidies/jgrants-S-00008881.html">詳細を見る →</a>
+    </p>
+  </article>
+  <article
+    class="card"
+    data-id="jgrants-S-00008879"
+    data-industry="全業種"
+    data-size="中小企業"
+    data-purpose="設備投資"
+    data-prefecture="全国"
+    data-deadline="2026-05-27"
+    data-amount-max="3000"
+    data-first-seen="2026-05-13T02:45:45.758075+00:00"
+    data-urgency="4">
+    <header class="card-head">
+<span class="badge badge-new">新着</span><span class="badge badge-urgent">締切間近</span>      <h2 class="card-title">令和８年度国際ルール形成・市場創造型標準化推進事業費補助金</h2>
+    </header>
+    <ul class="tag-list">
+<li class="tag">全業種</li><li class="tag tag-size">中小企業</li>    </ul>
+    <dl class="card-meta">
+<dt>補助額</dt><dd>最大30,000,000円</dd><dt>補助率</dt><dd>不明</dd><dt>締切</dt><dd>2026-05-27</dd><dt>地域</dt><dd>全国</dd>    </dl>
+    <p class="card-summary"><span class="ai-label">AI要約</span> 令和８年度国際ルール形成・市場創造型標準化推進事業費補助金（締切 2026-05-27）</p>
+    <p class="card-actions">
+      <a class="btn" href="subsidies/jgrants-S-00008879.html">詳細を見る →</a>
+    </p>
+  </article>
+  <article
+    class="card"
+    data-id="jgrants-S-00008876"
+    data-industry="全業種"
+    data-size="中小企業"
+    data-purpose="販路開拓,海外展開"
+    data-prefecture="静岡県"
+    data-deadline="2026-06-05"
+    data-amount-max="0"
+    data-first-seen="2026-05-13T02:45:45.758075+00:00"
+    data-urgency="3">
+    <header class="card-head">
+<span class="badge badge-new">新着</span>      <h2 class="card-title">【静岡県】令和8年度_中小企業等海外展開支援事業費補助金（海外出願支援事業）</h2>
+    </header>
+    <ul class="tag-list">
+<li class="tag">全業種</li><li class="tag tag-size">中小企業</li>    </ul>
+    <dl class="card-meta">
+<dt>補助額</dt><dd>最大0円</dd><dt>補助率</dt><dd>不明</dd><dt>締切</dt><dd>2026-06-05</dd><dt>地域</dt><dd>静岡県</dd>    </dl>
+    <p class="card-summary"><span class="ai-label">AI要約</span> 【静岡県】令和8年度_中小企業等海外展開支援事業費補助金（海外出願支援事業）（締切 2026-06-05）</p>
+    <p class="card-actions">
+      <a class="btn" href="subsidies/jgrants-S-00008876.html">詳細を見る →</a>
+    </p>
+  </article>
+  <article
+    class="card"
+    data-id="jgrants-S-00008874"
+    data-industry="全業種"
+    data-size="中小企業"
+    data-purpose="設備投資"
+    data-prefecture="全国"
+    data-deadline="2026-05-26"
+    data-amount-max="2000"
+    data-first-seen="2026-05-13T02:45:45.758075+00:00"
+    data-urgency="4">
+    <header class="card-head">
+<span class="badge badge-new">新着</span><span class="badge badge-urgent">締切間近</span>      <h2 class="card-title">令和８年度「水力発電導入促進支援事業費補助金（事業性評価支援事業）」（新規事業 １次締切分）</h2>
+    </header>
+    <ul class="tag-list">
+<li class="tag">全業種</li><li class="tag tag-size">中小企業</li>    </ul>
+    <dl class="card-meta">
+<dt>補助額</dt><dd>最大20,000,000円</dd><dt>補助率</dt><dd>不明</dd><dt>締切</dt><dd>2026-05-26</dd><dt>地域</dt><dd>全国</dd>    </dl>
+    <p class="card-summary"><span class="ai-label">AI要約</span> 令和８年度「水力発電導入促進支援事業費補助金（事業性評価支援事業）」（新規事業 １次締切分）（締切 2026-05-26）</p>
+    <p class="card-actions">
+      <a class="btn" href="subsidies/jgrants-S-00008874.html">詳細を見る →</a>
+    </p>
+  </article>
+  <article
+    class="card"
+    data-id="jgrants-S-00008872"
+    data-industry="医療"
+    data-size="中小企業"
+    data-purpose="人材育成"
+    data-prefecture="全国"
+    data-deadline="2026-05-20"
+    data-amount-max="0"
+    data-first-seen="2026-05-13T02:45:45.758075+00:00"
+    data-urgency="5">
+    <header class="card-head">
+<span class="badge badge-new">新着</span><span class="badge badge-urgent">締切間近</span>      <h2 class="card-title">令和８年度精神科医療体制確保研修事業費補助金</h2>
+    </header>
+    <ul class="tag-list">
+<li class="tag">医療</li><li class="tag tag-size">中小企業</li>    </ul>
+    <dl class="card-meta">
+<dt>補助額</dt><dd>最大0円</dd><dt>補助率</dt><dd>不明</dd><dt>締切</dt><dd>2026-05-20</dd><dt>地域</dt><dd>全国</dd>    </dl>
+    <p class="card-summary"><span class="ai-label">AI要約</span> 令和８年度精神科医療体制確保研修事業費補助金（締切 2026-05-20）</p>
+    <p class="card-actions">
+      <a class="btn" href="subsidies/jgrants-S-00008872.html">詳細を見る →</a>
+    </p>
+  </article>
+  <article
+    class="card"
+    data-id="jgrants-S-00008861"
+    data-industry="全業種"
+    data-size="中小企業"
+    data-purpose="設備投資"
+    data-prefecture="全国"
+    data-deadline="2026-05-15"
+    data-amount-max="500"
+    data-first-seen="2026-05-13T02:45:45.758075+00:00"
+    data-urgency="5">
+    <header class="card-head">
+<span class="badge badge-new">新着</span><span class="badge badge-urgent">締切間近</span>      <h2 class="card-title">北九州市環境未来ビジネス創出助成金</h2>
+    </header>
+    <ul class="tag-list">
+<li class="tag">全業種</li><li class="tag tag-size">中小企業</li>    </ul>
+    <dl class="card-meta">
+<dt>補助額</dt><dd>最大5,000,000円</dd><dt>補助率</dt><dd>不明</dd><dt>締切</dt><dd>2026-05-15</dd><dt>地域</dt><dd>全国</dd>    </dl>
+    <p class="card-summary"><span class="ai-label">AI要約</span> 北九州市環境未来ビジネス創出助成金（締切 2026-05-15）</p>
+    <p class="card-actions">
+      <a class="btn" href="subsidies/jgrants-S-00008861.html">詳細を見る →</a>
+    </p>
+  </article>
+  <article
+    class="card"
+    data-id="jgrants-S-00008855"
+    data-industry="全業種"
+    data-size="中小企業"
+    data-purpose="販路開拓,海外展開"
+    data-prefecture="全国"
+    data-deadline="2026-05-18"
+    data-amount-max="10000"
+    data-first-seen="2026-05-13T02:45:45.758075+00:00"
+    data-urgency="5">
+    <header class="card-head">
+<span class="badge badge-new">新着</span><span class="badge badge-urgent">締切間近</span>      <h2 class="card-title">令和８年度スポーツエンターテインメント・コンテンツ海外展開支援事業費補助金</h2>
+    </header>
+    <ul class="tag-list">
+<li class="tag">全業種</li><li class="tag tag-size">中小企業</li>    </ul>
+    <dl class="card-meta">
+<dt>補助額</dt><dd>最大100,000,000円</dd><dt>補助率</dt><dd>不明</dd><dt>締切</dt><dd>2026-05-18</dd><dt>地域</dt><dd>全国</dd>    </dl>
+    <p class="card-summary"><span class="ai-label">AI要約</span> 令和８年度スポーツエンターテインメント・コンテンツ海外展開支援事業費補助金（締切 2026-05-18）</p>
+    <p class="card-actions">
+      <a class="btn" href="subsidies/jgrants-S-00008855.html">詳細を見る →</a>
+    </p>
+  </article>
+  <article
+    class="card"
+    data-id="jgrants-S-00008854"
+    data-industry="全業種"
+    data-size="中小企業"
+    data-purpose="省エネ"
+    data-prefecture="全国"
+    data-deadline="2026-05-25"
+    data-amount-max="50000"
+    data-first-seen="2026-05-13T02:45:45.758075+00:00"
+    data-urgency="4">
+    <header class="card-head">
+<span class="badge badge-new">新着</span><span class="badge badge-urgent">締切間近</span>      <h2 class="card-title">令和８年度 コールドチェーンを支える冷凍冷蔵機器の脱フロン・脱炭素化推進事業</h2>
+    </header>
+    <ul class="tag-list">
+<li class="tag">全業種</li><li class="tag tag-size">中小企業</li>    </ul>
+    <dl class="card-meta">
+<dt>補助額</dt><dd>最大500,000,000円</dd><dt>補助率</dt><dd>不明</dd><dt>締切</dt><dd>2026-05-25</dd><dt>地域</dt><dd>全国</dd>    </dl>
+    <p class="card-summary"><span class="ai-label">AI要約</span> 令和８年度 コールドチェーンを支える冷凍冷蔵機器の脱フロン・脱炭素化推進事業（締切 2026-05-25）</p>
+    <p class="card-actions">
+      <a class="btn" href="subsidies/jgrants-S-00008854.html">詳細を見る →</a>
+    </p>
+  </article>
+  <article
+    class="card"
+    data-id="jgrants-S-00008853"
+    data-industry="全業種"
+    data-size="中小企業"
+    data-purpose="設備投資"
+    data-prefecture="東京都"
+    data-deadline="2026-06-30"
+    data-amount-max="4000"
+    data-first-seen="2026-05-13T02:45:45.758075+00:00"
+    data-urgency="2">
+    <header class="card-head">
+<span class="badge badge-new">新着</span>      <h2 class="card-title">ステーブルコイン社会実装促進事業補助金</h2>
+    </header>
+    <ul class="tag-list">
+<li class="tag">全業種</li><li class="tag tag-size">中小企業</li>    </ul>
+    <dl class="card-meta">
+<dt>補助額</dt><dd>最大40,000,000円</dd><dt>補助率</dt><dd>不明</dd><dt>締切</dt><dd>2026-06-30</dd><dt>地域</dt><dd>東京都</dd>    </dl>
+    <p class="card-summary"><span class="ai-label">AI要約</span> ステーブルコイン社会実装促進事業補助金（締切 2026-06-30）</p>
+    <p class="card-actions">
+      <a class="btn" href="subsidies/jgrants-S-00008853.html">詳細を見る →</a>
+    </p>
+  </article>
+  <article
+    class="card"
+    data-id="jgrants-S-00008852"
+    data-industry="全業種"
+    data-size="中小企業"
+    data-purpose="設備投資"
+    data-prefecture="全国"
+    data-deadline="2026-05-15"
+    data-amount-max="0"
+    data-first-seen="2026-05-13T02:45:45.758075+00:00"
+    data-urgency="5">
+    <header class="card-head">
+<span class="badge badge-new">新着</span><span class="badge badge-urgent">締切間近</span>      <h2 class="card-title">観光地・観光産業におけるユニバーサルツーリズム促進事業</h2>
+    </header>
+    <ul class="tag-list">
+<li class="tag">全業種</li><li class="tag tag-size">中小企業</li>    </ul>
+    <dl class="card-meta">
+<dt>補助額</dt><dd>最大0円</dd><dt>補助率</dt><dd>不明</dd><dt>締切</dt><dd>2026-05-15</dd><dt>地域</dt><dd>全国</dd>    </dl>
+    <p class="card-summary"><span class="ai-label">AI要約</span> 観光地・観光産業におけるユニバーサルツーリズム促進事業（締切 2026-05-15）</p>
+    <p class="card-actions">
+      <a class="btn" href="subsidies/jgrants-S-00008852.html">詳細を見る →</a>
+    </p>
+  </article>
+  <article
+    class="card"
+    data-id="jgrants-S-00008846"
+    data-industry="建設"
+    data-size="中小企業"
+    data-purpose="設備投資"
+    data-prefecture="全国"
+    data-deadline="2026-10-22"
+    data-amount-max="100"
+    data-first-seen="2026-05-13T02:45:45.758075+00:00"
+    data-urgency="1">
+    <header class="card-head">
+<span class="badge badge-new">新着</span>      <h2 class="card-title">【令和７年度補正予算・令和８年度】二酸化炭素排出抑制対策事業費等補助金（業務用建築物ストックの省CO2改修調査支援事業（令和７年度補正予算二次公募・令和８年度一次公募））</h2>
+    </header>
+    <ul class="tag-list">
+<li class="tag">建設</li><li class="tag tag-size">中小企業</li>    </ul>
+    <dl class="card-meta">
+<dt>補助額</dt><dd>最大1,000,000円</dd><dt>補助率</dt><dd>不明</dd><dt>締切</dt><dd>2026-10-22</dd><dt>地域</dt><dd>全国</dd>    </dl>
+    <p class="card-summary"><span class="ai-label">AI要約</span> 【令和７年度補正予算・令和８年度】二酸化炭素排出抑制対策事業費等補助金（業務用建築物ストックの省CO2改修調査支援事業（令和７年度補正予算二次公募・令和８年度一次公募））（締切 2026-10-22）</p>
+    <p class="card-actions">
+      <a class="btn" href="subsidies/jgrants-S-00008846.html">詳細を見る →</a>
+    </p>
+  </article>
+  <article
+    class="card"
+    data-id="jgrants-S-00008839"
+    data-industry="全業種"
+    data-size="中小企業"
+    data-purpose="設備投資"
+    data-prefecture="全国"
+    data-deadline="2026-05-27"
+    data-amount-max="20000"
+    data-first-seen="2026-05-13T02:45:45.758075+00:00"
+    data-urgency="4">
+    <header class="card-head">
+<span class="badge badge-new">新着</span><span class="badge badge-urgent">締切間近</span>      <h2 class="card-title">令和８年度「原子力産業基盤強化事業補助金」</h2>
+    </header>
+    <ul class="tag-list">
+<li class="tag">全業種</li><li class="tag tag-size">中小企業</li>    </ul>
+    <dl class="card-meta">
+<dt>補助額</dt><dd>最大200,000,000円</dd><dt>補助率</dt><dd>不明</dd><dt>締切</dt><dd>2026-05-27</dd><dt>地域</dt><dd>全国</dd>    </dl>
+    <p class="card-summary"><span class="ai-label">AI要約</span> 令和８年度「原子力産業基盤強化事業補助金」（締切 2026-05-27）</p>
+    <p class="card-actions">
+      <a class="btn" href="subsidies/jgrants-S-00008839.html">詳細を見る →</a>
+    </p>
+  </article>
+  <article
+    class="card"
+    data-id="jgrants-S-00008837"
+    data-industry="全業種"
+    data-size="中小企業"
+    data-purpose="設備投資"
+    data-prefecture="全国"
+    data-deadline="2026-05-28"
+    data-amount-max="0"
+    data-first-seen="2026-05-13T02:45:45.758075+00:00"
+    data-urgency="4">
+    <header class="card-head">
+<span class="badge badge-new">新着</span><span class="badge badge-urgent">締切間近</span>      <h2 class="card-title">令和７年度（補正）／令和８年度 二酸化炭素排出抑制対策事業費等補助金 再エネ等熱利用設備導入事業 【再エネ熱】</h2>
+    </header>
+    <ul class="tag-list">
+<li class="tag">全業種</li><li class="tag tag-size">中小企業</li>    </ul>
+    <dl class="card-meta">
+<dt>補助額</dt><dd>最大0円</dd><dt>補助率</dt><dd>不明</dd><dt>締切</dt><dd>2026-05-28</dd><dt>地域</dt><dd>全国</dd>    </dl>
+    <p class="card-summary"><span class="ai-label">AI要約</span> 令和７年度（補正）／令和８年度 二酸化炭素排出抑制対策事業費等補助金 再エネ等熱利用設備導入事業 【再エネ熱】（締切 2026-05-28）</p>
+    <p class="card-actions">
+      <a class="btn" href="subsidies/jgrants-S-00008837.html">詳細を見る →</a>
+    </p>
+  </article>
+  <article
+    class="card"
+    data-id="jgrants-S-00008834"
+    data-industry="全業種"
+    data-size="中小企業"
+    data-purpose="販路開拓,海外展開"
+    data-prefecture="群馬県"
+    data-deadline="2026-05-29"
+    data-amount-max="300"
+    data-first-seen="2026-05-13T02:45:45.758075+00:00"
+    data-urgency="3">
+    <header class="card-head">
+<span class="badge badge-new">新着</span>      <h2 class="card-title">【群馬県】令和8年度_中小企業等海外展開支援事業費補助金（海外出願支援事業）</h2>
+    </header>
+    <ul class="tag-list">
+<li class="tag">全業種</li><li class="tag tag-size">中小企業</li>    </ul>
+    <dl class="card-meta">
+<dt>補助額</dt><dd>最大3,000,000円</dd><dt>補助率</dt><dd>不明</dd><dt>締切</dt><dd>2026-05-29</dd><dt>地域</dt><dd>群馬県</dd>    </dl>
+    <p class="card-summary"><span class="ai-label">AI要約</span> 【群馬県】令和8年度_中小企業等海外展開支援事業費補助金（海外出願支援事業）（締切 2026-05-29）</p>
+    <p class="card-actions">
+      <a class="btn" href="subsidies/jgrants-S-00008834.html">詳細を見る →</a>
+    </p>
+  </article>
+</section>
+
+<p id="no-match" class="empty hidden">条件に一致する補助金がありません。</p>
+  </main>
+
+  <footer class="site-footer">
+    <p>最終更新: 2026-05-13 11:56 UTC</p>
+    <p>データ出典:
+      <a href="https://www.jgrants-portal.go.jp" rel="noopener noreferrer">Jグランツ（デジタル庁）</a>
+      の<a href="https://www.jgrants-portal.go.jp/open-api" rel="noopener noreferrer">公開API</a>を利用
+    </p>
+    <p class="diff-points">
+      広告なし・会員登録不要
+    </p>
+    <p class="disclaimer">
+      掲載情報は参考用であり、申請可否・採択を保証するものではありません。
+      最新の情報は必ず各公式サイトでご確認ください。
+    </p>
+  </footer>
+
+<script src="filter.js"></script>
+</body>
+</html>

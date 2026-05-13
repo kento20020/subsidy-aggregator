@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>{% block title %}補助金まとめ{% endblock %}</title>
+  <link rel="stylesheet" href="{{ root|default('') }}style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="site-title" href="{{ root|default('') }}index.html">補助金まとめ</a>
+    <nav>
+      <a href="{{ root|default('') }}about.html">このサイトについて</a>
+    </nav>
+  </header>
+
+  <main class="site-main">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <p>最終更新: {{ updated_at }}</p>
+    <p>データ出典:
+      <a href="https://www.jgrants-portal.go.jp" rel="noopener noreferrer">Jグランツ（デジタル庁）</a>
+      の<a href="https://www.jgrants-portal.go.jp/open-api" rel="noopener noreferrer">公開API</a>を利用
+    </p>
+    <p class="diff-points">
+      広告なし・会員登録不要
+      {% if repo_url and repo_url != "#" %}
+      ・<a href="{{ repo_url }}" rel="noopener noreferrer">オープンソース</a>
+      {% endif %}
+    </p>
+    <p class="disclaimer">
+      掲載情報は参考用であり、申請可否・採択を保証するものではありません。
+      最新の情報は必ず各公式サイトでご確認ください。
+    </p>
+  </footer>
+
+  {% block scripts %}{% endblock %}
+</body>
+</html>

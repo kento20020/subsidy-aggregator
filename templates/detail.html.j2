@@ -1,0 +1,56 @@
+{% extends "base.html.j2" %}
+{% set root = "../" %}
+{% block title %}{{ s.title }} | 補助金まとめ{% endblock %}
+
+{% block content %}
+<article class="detail">
+  <p class="back-link"><a href="../index.html">← 一覧に戻る</a></p>
+  <h1>{{ s.title }}</h1>
+
+  <div class="badges">
+    {% if s.is_new %}<span class="badge badge-new">新着</span>{% endif %}
+    {% if s.urgency and s.urgency >= 4 %}<span class="badge badge-urgent">締切間近</span>{% endif %}
+  </div>
+
+  <table class="detail-table">
+    <tbody>
+      {% if s.amount_text %}<tr><th>補助額</th><td>{{ s.amount_text }}</td></tr>{% endif %}
+      {% if s.subsidy_rate %}<tr><th>補助率</th><td>{{ s.subsidy_rate }}</td></tr>{% endif %}
+      {% if s.deadline %}<tr><th>締切</th><td>{{ s.deadline }}</td></tr>{% endif %}
+      {% if s.prefecture %}<tr><th>対象地域</th><td>{{ s.prefecture }}</td></tr>{% endif %}
+      {% if s.target_text %}<tr><th>対象</th><td>{{ s.target_text }}</td></tr>{% endif %}
+      {% if s.industry_tags %}<tr><th>業種</th><td>{{ s.industry_tags|join(' / ') }}<span class="ai-label">AI推定</span></td></tr>{% endif %}
+      {% if s.size_tags %}<tr><th>規模</th><td>{{ s.size_tags|join(' / ') }}<span class="ai-label">AI推定</span></td></tr>{% endif %}
+      {% if s.purpose_tags %}<tr><th>用途</th><td>{{ s.purpose_tags|join(' / ') }}<span class="ai-label">AI推定</span></td></tr>{% endif %}
+      <tr><th>取得元</th><td>{{ s.source }}</td></tr>
+      <tr><th>最終更新</th><td>{{ s.updated_at }}</td></tr>
+    </tbody>
+  </table>
+
+  {% if s.summary %}
+  <section class="detail-summary">
+    <h2>要約 <small class="ai-label">AI自動生成</small></h2>
+    {% if s.tag_status == "mocked" %}
+    <p class="ai-notice">※このページのタグ・要約は開発用の簡易ロジックで生成されています。本番ではClaude Haikuによる要約に切り替わります。</p>
+    {% endif %}
+    <p>{{ s.summary }}</p>
+  </section>
+  {% endif %}
+
+  {% if s.body %}
+  <section class="detail-body">
+    <h2>本文（取得元から抜粋）</h2>
+    <p>{{ s.body }}</p>
+  </section>
+  {% endif %}
+
+  <p class="detail-cta">
+    <a class="btn btn-primary" href="{{ s.url }}" rel="noopener noreferrer">申請ページを公式サイトで開く →</a>
+  </p>
+
+  <p class="disclaimer">
+    この情報は {{ s.source }} の公開情報を機械的に整理したものです。
+    最終的な要件・申請可否は必ず公式サイトでご確認ください。
+  </p>
+</article>
+{% endblock %}
