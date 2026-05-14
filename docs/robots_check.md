@@ -63,3 +63,17 @@
 - host `api.jgrants-portal.go.jp`: robots.txt 不存在 → 制限なしと解釈 (RFC 9309)
   - `https://api.jgrants-portal.go.jp/exp/v1/public/subsidies` → OK
 
+## 2026-05-14T23:59:04.418159+00:00
+- robots.txt: `(hostごとに取得)`
+- 判定: **OK**
+- User-Agent: `SubsidySiteBot/0.1 (+local-poc)`
+- host `api.jgrants-portal.go.jp`: robots.txt 不存在 → 制限なしと解釈 (RFC 9309)
+  - `https://api.jgrants-portal.go.jp/exp/v1/public/subsidies` → OK
+
+## 2026-05-14T23:59:05.113671+00:00
+- robots.txt: `(hostごとに取得)`
+- 判定: **OK**
+- User-Agent: `SubsidySiteBot/0.1 (+local-poc)`
+- host `api.jgrants-portal.go.jp`: robots.txt 不存在 → 制限なしと解釈 (RFC 9309)
+  - `https://api.jgrants-portal.go.jp/exp/v1/public/subsidies` → OK
+
