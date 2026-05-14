@@ -29,7 +29,7 @@ REPO_URL = "https://github.com/kento20020/subsidy-aggregator"
 # Cloudflare Worker のエンドポイント (自由入力テキスト → フィルタ値変換)。
 # 空文字なら ウィザードは Worker を呼ばずキーワードマッチのみで動作する。
 # 例: "https://subsidy-interpret.your-subdomain.workers.dev/interpret"
-WORKER_URL = ""
+WORKER_URL = "https://subsidy-interpret.kento-dev.workers.dev/interpret"
 
 # OGP / SNS 共有用のサイトベースURL (末尾スラなし)
 SITE_URL = "https://kento20020.github.io/subsidy-aggregator"
