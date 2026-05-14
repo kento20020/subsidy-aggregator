@@ -1,8 +1,18 @@
 # subsidy-interpret Worker
 
-ユーザーの自由入力テキストを、補助金検索のフィルタ値（業種・規模・用途・地域）に変換する Cloudflare Worker。
+ユーザーの自由入力テキストを、補助金検索のフィルタ値に変換する Cloudflare Worker。
+**subsidy-aggregator (日本語)** と **grants-radar (英語)** の2サイトから共用される。
 
 GitHub Pages 上のサイトは Anthropic API キーを安全に持てないため、この Worker が中継する。
+
+## 2つのスキーマ
+
+リクエストボディに `schema` を指定して切り替える (省略時は `jgrants_v1`):
+
+| schema | 用途 | 出力フィールド |
+|---|---|---|
+| `jgrants_v1` (default) | subsidy-aggregator | `industry`, `size`, `purpose`, `region` (日本語) |
+| `grants_v1` | grants-radar | `org_type`, `sector`, `use` (英語) |
 
 ## セキュリティ設計
 
@@ -42,17 +52,23 @@ WORKER_URL = "https://subsidy-interpret.your-subdomain.workers.dev/interpret"
 
 ## 動作確認
 
+### jgrants_v1 (日本語)
 ```powershell
 curl -X POST https://subsidy-interpret.your-subdomain.workers.dev/interpret `
   -H "Content-Type: application/json" `
   -H "Origin: https://kento20020.github.io" `
   -d '{"text":"小さなパン屋を夫婦で経営。新しいオーブンを導入したい"}'
 ```
+期待: `{"industry":["飲食"],"size":["個人事業主","小規模事業者"],"purpose":["設備投資"],"region":""}`
 
-期待レスポンス:
-```json
-{"industry":["飲食"],"size":["個人事業主","小規模事業者"],"purpose":["設備投資"],"region":""}
+### grants_v1 (英語)
+```powershell
+curl -X POST https://subsidy-interpret.your-subdomain.workers.dev/interpret `
+  -H "Content-Type: application/json" `
+  -H "Origin: https://kento20020.github.io" `
+  -d '{"text":"Small biotech startup researching gene therapy, need new microscope","schema":"grants_v1"}'
 ```
+期待: `{"org_type":["For-profit"],"sector":["Health","Research"],"use":["Research","Equipment"]}`
 
 ## コスト試算
 
