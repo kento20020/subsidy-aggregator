@@ -1,0 +1,26 @@
+{% extends "base.html.j2" %}
+{% block title %}ページが見つかりません | {{ site_name }}{% endblock %}
+{% block og_title %}ページが見つかりません | {{ site_name }}{% endblock %}
+{% block og_url %}{{ site_url }}/404.html{% endblock %}
+
+{% block content %}
+<article class="not-found">
+  <h1>404 — ページが見つかりません</h1>
+  <p class="lead">お探しのページは移動・削除されたか、URLが間違っている可能性があります。</p>
+
+  <p>考えられる原因:</p>
+  <ul>
+    <li>補助金の公募が終了し、一覧から削除された</li>
+    <li>URL が古い（このサイトは毎朝再生成されるため、古い詳細ページのIDは無効になります）</li>
+    <li>URL のスペルミス</li>
+  </ul>
+
+  <p class="back-link">
+    <a class="btn" href="index.html">補助金一覧トップへ →</a>
+  </p>
+
+  <p class="hint">
+    トップから業種・地域・締切などで絞り込めます。
+  </p>
+</article>
+{% endblock %}

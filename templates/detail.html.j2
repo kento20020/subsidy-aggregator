@@ -1,6 +1,13 @@
 {% extends "base.html.j2" %}
 {% set root = "../" %}
 {% block title %}{{ s.title }} | 補助金まとめ{% endblock %}
+{% block og_title %}{{ s.title }} | 補助金まとめ{% endblock %}
+{% block og_description %}{{ s.plain_summary or s.catch_phrase or site_description }}{% endblock %}
+{% block og_url %}{{ site_url }}/subsidies/{{ s.id }}.html{% endblock %}
+
+{% block head_extra %}
+<script type="application/ld+json">{{ detail_ld_data|tojson }}</script>
+{% endblock %}
 
 {% block content %}
 <article class="detail" data-id="{{ s.id }}">
@@ -87,6 +94,17 @@
     <a class="btn btn-primary" href="{{ s.front_url or s.url }}" rel="noopener noreferrer">申請ページを公式サイトで開く →</a>
   </p>
 
+  <div class="share-actions" aria-label="この補助金を共有">
+    <span class="share-label">共有:</span>
+    <a class="share-button share-twitter"
+       href="https://twitter.com/intent/tweet?text={{ share_tweet_text }}&url={{ share_url }}"
+       target="_blank" rel="noopener noreferrer"
+       aria-label="Xでこの補助金を共有">X (Twitter) で共有</a>
+    <button type="button" class="share-button share-copy"
+            data-share-url="{{ share_url }}"
+            aria-label="ページURLをコピー">URLをコピー</button>
+  </div>
+
   <p class="disclaimer">
     この情報は {{ s.source }} の公開情報をAIが整理したものです。
     最終的な要件・申請可否は必ず公式サイトでご確認ください。
@@ -97,4 +115,5 @@
 
 {% block scripts %}
 <script src="../visited.js"></script>
+<script src="../share.js"></script>
 {% endblock %}

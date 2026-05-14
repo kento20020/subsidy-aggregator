@@ -4,6 +4,7 @@
 - autoescape = select_autoescape(["html", "xml"]) でXSS対策デフォルトON
 - |safe フィルタは絶対に使わない（base.html.j2側でも禁止）
 - 全テキストは sanitize.clean_text を通したものを渡す
+- JSON-LD は |tojson 経由で安全にエスケープ
 """
 from __future__ import annotations
 
@@ -12,10 +13,9 @@ import logging
 import shutil
 import sys
 from datetime import datetime, timezone
+from urllib.parse import quote, urlparse
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
-
-from urllib.parse import urlparse
 
 from .config import (
     DATA_FILE,
@@ -54,6 +54,111 @@ def _prepare_view(record: dict) -> dict:
         "catch_phrase": clean_text(record.get("catch_phrase", ""), max_chars=200),
         "subsidy_rate_official": clean_text(record.get("subsidy_rate_official", ""), max_chars=50),
     }
+
+
+def _build_index_ld(subsidies: list[dict]) -> dict:
+    """トップページ用 JSON-LD: WebSite + ItemList。"""
+    items = []
+    for i, s in enumerate(subsidies, 1):
+        items.append({
+            "@type": "ListItem",
+            "position": i,
+            "url": f"{SITE_URL}/subsidies/{s['id']}.html",
+            "name": s.get("title", ""),
+        })
+    return {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebSite",
+                "name": SITE_NAME,
+                "url": f"{SITE_URL}/",
+                "description": SITE_DESCRIPTION,
+                "inLanguage": "ja",
+            },
+            {
+                "@type": "ItemList",
+                "name": f"{SITE_NAME} 補助金一覧",
+                "numberOfItems": len(items),
+                "itemListElement": items[:100],  # 検索エンジン向け、長すぎ防止
+            },
+        ],
+    }
+
+
+def _build_detail_ld(s: dict) -> dict:
+    """詳細ページ用 JSON-LD: Article。"""
+    description = s.get("plain_summary") or s.get("catch_phrase") or ""
+    data: dict = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": s.get("title", ""),
+        "description": description,
+        "inLanguage": "ja",
+        "url": f"{SITE_URL}/subsidies/{s['id']}.html",
+        "isAccessibleForFree": True,
+        "publisher": {
+            "@type": "Organization",
+            "name": SITE_NAME,
+            "url": f"{SITE_URL}/",
+        },
+    }
+    if s.get("first_seen_at"):
+        data["datePublished"] = s["first_seen_at"]
+    if s.get("updated_at"):
+        data["dateModified"] = s["updated_at"]
+    if s.get("source"):
+        data["sourceOrganization"] = {
+            "@type": "GovernmentOrganization",
+            "name": "デジタル庁",
+        }
+    return data
+
+
+def _build_sitemap_xml(subsidies: list[dict], updated_at_iso: str) -> str:
+    """sitemap.xml を組み立てる。"""
+    lastmod = updated_at_iso[:10] if updated_at_iso else datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    urls = [
+        (f"{SITE_URL}/", "daily", "1.0"),
+        (f"{SITE_URL}/about.html", "monthly", "0.5"),
+        (f"{SITE_URL}/privacy.html", "yearly", "0.3"),
+    ]
+    for s in subsidies:
+        urls.append((f"{SITE_URL}/subsidies/{s['id']}.html", "daily", "0.7"))
+
+    lines = ['<?xml version="1.0" encoding="UTF-8"?>',
+             '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+    for url, changefreq, priority in urls:
+        # URL構成要素は安全 (英数字+ハイフン+ASCII) なので追加エスケープ不要
+        lines.append("  <url>")
+        lines.append(f"    <loc>{url}</loc>")
+        lines.append(f"    <lastmod>{lastmod}</lastmod>")
+        lines.append(f"    <changefreq>{changefreq}</changefreq>")
+        lines.append(f"    <priority>{priority}</priority>")
+        lines.append("  </url>")
+    lines.append("</urlset>")
+    return "\n".join(lines)
+
+
+def _build_robots_txt() -> str:
+    return (
+        "User-agent: *\n"
+        "Allow: /\n"
+        f"Sitemap: {SITE_URL}/sitemap.xml\n"
+    )
+
+
+def _share_text(s: dict) -> str:
+    """Twitter Web Intent の text パラメータ用。URLエンコード済み。"""
+    parts = [s.get("title", "")]
+    if s.get("plain_summary"):
+        parts.append(s["plain_summary"])
+    parts.append(f"#補助金まとめ")
+    raw = "\n".join(p for p in parts if p)
+    # Twitterのtext上限は控えめに 200 文字程度
+    if len(raw) > 200:
+        raw = raw[:197] + "..."
+    return quote(raw, safe="")
 
 
 def run() -> int:
@@ -99,7 +204,12 @@ def run() -> int:
 
     index_tmpl = env.get_template("index.html.j2")
     (DOCS_DIR / "index.html").write_text(
-        index_tmpl.render(subsidies=subsidies, total=total, **common),
+        index_tmpl.render(
+            subsidies=subsidies,
+            total=total,
+            index_ld_data=_build_index_ld(subsidies),
+            **common,
+        ),
         encoding="utf-8",
     )
 
@@ -115,14 +225,33 @@ def run() -> int:
         encoding="utf-8",
     )
 
+    not_found_tmpl = env.get_template("404.html.j2")
+    (DOCS_DIR / "404.html").write_text(
+        not_found_tmpl.render(**common),
+        encoding="utf-8",
+    )
+
     detail_tmpl = env.get_template("detail.html.j2")
     for s in subsidies:
+        share_url = f"{SITE_URL}/subsidies/{s['id']}.html"
         (DOCS_DIR / "subsidies" / f"{s['id']}.html").write_text(
-            detail_tmpl.render(s=s, **common),
+            detail_tmpl.render(
+                s=s,
+                detail_ld_data=_build_detail_ld(s),
+                share_url=share_url,
+                share_tweet_text=_share_text(s),
+                **common,
+            ),
             encoding="utf-8",
         )
 
-    logger.info("build: index + detail %d ページを生成", total)
+    (DOCS_DIR / "sitemap.xml").write_text(
+        _build_sitemap_xml(subsidies, updated_at_iso),
+        encoding="utf-8",
+    )
+    (DOCS_DIR / "robots.txt").write_text(_build_robots_txt(), encoding="utf-8")
+
+    logger.info("build: index + detail %d ページ + 404 + sitemap.xml + robots.txt を生成", total)
     return 0
 
 

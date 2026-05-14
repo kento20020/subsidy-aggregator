@@ -26,14 +26,15 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
+  <a class="skip-link" href="#main-content">本文へスキップ</a>
+  <header class="site-header" role="banner">
     <a class="site-title" href="index.html">補助金まとめ</a>
-    <nav>
+    <nav aria-label="グローバルナビゲーション">
       <a href="about.html">このサイトについて</a>
     </nav>
   </header>
 
-  <main class="site-main">
+  <main class="site-main" id="main-content" tabindex="-1">
 <article class="about">
   <h1>プライバシーポリシー</h1>
   <p class="lead">本サイト (補助金まとめ) は、ユーザーの個人情報を取得・保存しません。本ページは、収集していない情報の範囲と、ブラウザ機能・第三者サービスの利用について明示するものです。</p>
@@ -82,7 +83,7 @@
 </article>
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer" role="contentinfo">
     <p>最終更新: 2026-05-14 00:01 UTC</p>
     <p>データ出典:
       <a href="https://www.jgrants-portal.go.jp" rel="noopener noreferrer">Jグランツ（デジタル庁）</a>

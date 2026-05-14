@@ -28,20 +28,22 @@
   <meta name="twitter:image" content="{{ site_url }}/og.png">
 
   <link rel="stylesheet" href="{{ root|default('') }}style.css">
+  {% block head_extra %}{% endblock %}
 </head>
 <body>
-  <header class="site-header">
+  <a class="skip-link" href="#main-content">本文へスキップ</a>
+  <header class="site-header" role="banner">
     <a class="site-title" href="{{ root|default('') }}index.html">補助金まとめ</a>
-    <nav>
+    <nav aria-label="グローバルナビゲーション">
       <a href="{{ root|default('') }}about.html">このサイトについて</a>
     </nav>
   </header>
 
-  <main class="site-main">
+  <main class="site-main" id="main-content" tabindex="-1">
     {% block content %}{% endblock %}
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer" role="contentinfo">
     <p>最終更新: {{ updated_at }}</p>
     <p>データ出典:
       <a href="https://www.jgrants-portal.go.jp" rel="noopener noreferrer">Jグランツ（デジタル庁）</a>

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kento20020.github.io/subsidy-aggregator/sitemap.xml

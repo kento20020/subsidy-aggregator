@@ -11,6 +11,10 @@
 ] %}
 {% block title %}補助金まとめ（{{ total }}件掲載）{% endblock %}
 
+{% block head_extra %}
+<script type="application/ld+json">{{ index_ld_data|tojson }}</script>
+{% endblock %}
+
 {% block content %}
 <section class="intro">
   <h1>補助金まとめ</h1>
