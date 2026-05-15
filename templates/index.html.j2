@@ -34,7 +34,8 @@
     </div>
     <div class="filter-group">
       <span class="filter-label">規模</span>
-      {% for tag in ["個人事業主", "小規模事業者", "中小企業", "大企業", "全規模"] %}
+      {# TECH_DEF §1.2: 4 カテゴリ (中小企業基本法準拠)。「全規模」は size_universal で表現 #}
+      {% for tag in ["個人事業主", "小規模事業者", "中小企業", "大企業"] %}
       <label><input type="checkbox" data-filter="size" value="{{ tag }}"> {{ tag }}</label>
       {% endfor %}
     </div>
@@ -112,6 +113,8 @@
     data-industry-universal="{{ 'true' if s.industry_universal else 'false' }}"
     data-industry-inferred="{{ 'true' if s.industry_inferred else 'false' }}"
     data-size="{{ s.size_tags|join(',') }}"
+    data-size-universal="{{ 'true' if s.size_universal else 'false' }}"
+    data-size-inferred="{{ 'true' if s.size_inferred else 'false' }}"
     data-purpose="{{ s.purpose_tags|join(',') }}"
     data-prefecture="{{ s.prefecture or '' }}"
     data-deadline="{{ s.deadline or '' }}"
@@ -126,7 +129,8 @@
     <ul class="tag-list">
       {% if s.industry_universal %}<li class="tag tag-universal" title="全業種対象">全業種</li>{% else %}{% for t in s.industry_tags[:3] %}<li class="tag">{{ t }}</li>{% endfor %}{% endif %}
       {% if s.industry_inferred and not s.industry_universal %}<li class="inferred-badge" title="本文から AI が推測した業種">推測</li>{% endif %}
-      {% for t in s.size_tags[:2] %}<li class="tag tag-size">{{ t }}</li>{% endfor %}
+      {% if s.size_universal %}<li class="tag tag-size tag-universal" title="全規模対象">全規模</li>{% else %}{% for t in s.size_tags[:3] %}<li class="tag tag-size">{{ t }}</li>{% endfor %}{% endif %}
+      {% if s.size_inferred and not s.size_universal %}<li class="inferred-badge" title="本文から AI が推測した規模">推測</li>{% endif %}
     </ul>
     <dl class="card-meta">
       {% if s.amount_text %}<dt>補助額</dt><dd>{{ s.amount_text }}</dd>{% endif %}

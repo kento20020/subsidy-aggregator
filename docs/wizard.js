@@ -165,6 +165,8 @@
   // 旧スキーマ (Worker が「全業種」を返した場合) → ドロップ。
   // 新スキーマでは「全業種」はタグ値ではなく industry_universal フィールドで表現。
   var INDUSTRY_LEGACY_DROP = new Set(["全業種"]);
+  // Phase 2: 同様に「全規模」も新スキーマでは size_universal で表現するためドロップ
+  var SIZE_LEGACY_DROP = new Set(["全規模"]);
   var SIZE_LABEL_TO_VALUE = {
     "個人事業主": "個人事業主",
     "小規模事業者(〜20人)": "小規模事業者",
@@ -304,12 +306,16 @@
     if (allFreeText) {
       var interp = await interpretFreeText(allFreeText);
       if (interp) {
-        // Phase 1: 旧スキーマの「全業種」値はフィルタに反映しない (新スキーマでは universal フィールドで表現、Worker は未対応)
+        // Phase 1/2: 旧スキーマの「全業種」「全規模」値はフィルタに反映しない
+        // (新スキーマでは universal フィールドで表現、Worker は未対応)
         interp.industry.forEach(function (v) {
           if (INDUSTRY_LEGACY_DROP.has(v)) return;
           if (industry.indexOf(v) === -1) industry.push(v);
         });
-        interp.size.forEach(function (v) { if (size.indexOf(v) === -1) size.push(v); });
+        interp.size.forEach(function (v) {
+          if (SIZE_LEGACY_DROP.has(v)) return;
+          if (size.indexOf(v) === -1) size.push(v);
+        });
         interp.purpose.forEach(function (v) { if (purpose.indexOf(v) === -1) purpose.push(v); });
       }
     }

@@ -53,6 +53,17 @@
     return false;
   }
 
+  // Phase 2 (TECH_DEF §1.2): size は universal フィールドの特別扱い
+  function matchesSize(card, selected) {
+    if (selected.length === 0) return true;
+    if (card.dataset.sizeUniversal === "true") return true; // 全規模対象は常にマッチ
+    var arr = (card.dataset.size || "").split(",").filter(Boolean);
+    for (var i = 0; i < selected.length; i++) {
+      if (arr.indexOf(selected[i]) !== -1) return true;
+    }
+    return false;
+  }
+
   function withinDeadline(deadlineStr, days) {
     if (days === "all" || !deadlineStr) return days === "all";
     var d = new Date(deadlineStr + "T23:59:59Z");
@@ -163,7 +174,7 @@
     cards.forEach(function (card) {
       var ok =
         matchesIndustry(card, industries) &&
-        matchesTag(card.dataset.size || "", sizes) &&
+        matchesSize(card, sizes) &&
         matchesTag(card.dataset.purpose || "", purposes) &&
         matchesPrefecture(card.dataset.prefecture || "", prefMode) &&
         withinDeadline(card.dataset.deadline || "", deadlineMode);

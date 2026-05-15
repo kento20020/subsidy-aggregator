@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-15T14:38:56.123873+00:00",
+  "updated_at": "2026-05-15T14:51:30.857548+00:00",
   "total": 50,
   "subsidies": [
     {
@@ -57,7 +57,9 @@
       "front_url": "https://www.jgrants-portal.go.jp/subsidy/a0WJ200000CDYuDMAX",
       "detail_fetched_at": "2026-05-14T23:59:07.823480+00:00",
       "industry_inferred": false,
-      "industry_universal": false
+      "industry_universal": false,
+      "size_universal": false,
+      "size_inferred": false
     },
     {
       "id": "jgrants-S-00009120",
@@ -116,7 +118,9 @@
       "front_url": "https://www.jgrants-portal.go.jp/subsidy/a0WJ200000CDYu8MAH",
       "detail_fetched_at": "2026-05-14T23:59:08.979199+00:00",
       "industry_inferred": false,
-      "industry_universal": false
+      "industry_universal": false,
+      "size_universal": false,
+      "size_inferred": false
     },
     {
       "id": "jgrants-S-00009118",
@@ -173,7 +177,9 @@
       "front_url": "https://www.jgrants-portal.go.jp/subsidy/a0WJ200000CDYtyMAH",
       "detail_fetched_at": "2026-05-14T23:59:09.968605+00:00",
       "industry_inferred": false,
-      "industry_universal": false
+      "industry_universal": false,
+      "size_universal": false,
+      "size_inferred": false
     },
     {
       "id": "jgrants-S-00009101",
@@ -231,7 +237,9 @@
       "front_url": "https://www.jgrants-portal.go.jp/subsidy/a0WJ200000CDYsSMAX",
       "detail_fetched_at": "2026-05-14T00:01:35.446228+00:00",
       "industry_inferred": false,
-      "industry_universal": false
+      "industry_universal": false,
+      "size_universal": false,
+      "size_inferred": false
     },
     {
       "id": "jgrants-S-00009099",
@@ -295,7 +303,9 @@
       ],
       "difficulty": 3,
       "industry_inferred": false,
-      "industry_universal": false
+      "industry_universal": false,
+      "size_universal": false,
+      "size_inferred": false
     },
     {
       "id": "jgrants-S-00009095",
@@ -320,7 +330,9 @@
       ],
       "size_tags": [
         "中小企業",
-        "大企業"
+        "大企業",
+        "個人事業主",
+        "小規模事業者"
       ],
       "purpose_tags": [
         "販路開拓",
@@ -349,7 +361,8 @@
         "申請書"
       ],
       "key_warnings": [
-        "島根県内の事業者限定"
+        "島根県内の事業者限定",
+        "従業員300人以下に限定"
       ],
       "plain_summary": "【島根県】外国出願補助金・販路拡大・海外展開をしたい。最大3,000,000円まで。",
       "concrete_targets": [
@@ -358,7 +371,9 @@
       ],
       "difficulty": 3,
       "industry_inferred": false,
-      "industry_universal": false
+      "industry_universal": false,
+      "size_universal": false,
+      "size_inferred": false
     },
     {
       "id": "jgrants-S-00009079",
@@ -383,7 +398,9 @@
       ],
       "size_tags": [
         "中小企業",
-        "大企業"
+        "大企業",
+        "個人事業主",
+        "小規模事業者"
       ],
       "purpose_tags": [
         "販路開拓",
@@ -412,7 +429,8 @@
         "申請書"
       ],
       "key_warnings": [
-        "山口県内の事業者限定"
+        "山口県内の事業者限定",
+        "従業員300人以下に限定"
       ],
       "plain_summary": "【山口県】外国出願補助金・販路拡大・海外展開をしたい。最大3,000,000円まで。",
       "concrete_targets": [
@@ -421,7 +439,9 @@
       ],
       "difficulty": 3,
       "industry_inferred": false,
-      "industry_universal": false
+      "industry_universal": false,
+      "size_universal": false,
+      "size_inferred": false
     },
     {
       "id": "jgrants-S-00009065",
@@ -446,7 +466,9 @@
       ],
       "size_tags": [
         "中小企業",
-        "大企業"
+        "大企業",
+        "個人事業主",
+        "小規模事業者"
       ],
       "purpose_tags": [
         "販路開拓",
@@ -466,7 +488,8 @@
         "申請書"
       ],
       "key_warnings": [
-        "長野県内の事業者限定"
+        "長野県内の事業者限定",
+        "従業員300人以下に限定"
       ],
       "plain_summary": "【長野県】令和８年度「中小企業等海外出願支援事業補助金」募集のご案内・販路拡大・海外展開をしたい。最大3,000,000円まで。",
       "difficulty": 3,
@@ -481,7 +504,9 @@
       "front_url": "https://www.jgrants-portal.go.jp/subsidy/a0WJ200000CDYooMAH",
       "detail_fetched_at": "2026-05-14T23:59:10.993738+00:00",
       "industry_inferred": false,
-      "industry_universal": false
+      "industry_universal": false,
+      "size_universal": false,
+      "size_inferred": false
     },
     {
       "id": "jgrants-S-00009061",
@@ -538,7 +563,9 @@
       ],
       "difficulty": 4,
       "industry_inferred": false,
-      "industry_universal": false
+      "industry_universal": false,
+      "size_universal": false,
+      "size_inferred": true
     },
     {
       "id": "jgrants-S-00009060",
@@ -563,7 +590,9 @@
       ],
       "size_tags": [
         "中小企業",
-        "大企業"
+        "大企業",
+        "個人事業主",
+        "小規模事業者"
       ],
       "purpose_tags": [
         "人材育成",
@@ -594,7 +623,8 @@
         "申請書"
       ],
       "key_warnings": [
-        "埼玉県内の事業者限定"
+        "埼玉県内の事業者限定",
+        "従業員300人以下に限定"
       ],
       "plain_summary": "【埼玉県】令和８年度海外出願支援事業・販路拡大・海外展開をしたい。最大3,000,000円まで。",
       "concrete_targets": [
@@ -603,7 +633,9 @@
       ],
       "difficulty": 3,
       "industry_inferred": false,
-      "industry_universal": false
+      "industry_universal": false,
+      "size_universal": false,
+      "size_inferred": false
     },
     {
       "id": "jgrants-S-00009057",
@@ -628,7 +660,9 @@
       ],
       "size_tags": [
         "中小企業",
-        "大企業"
+        "大企業",
+        "個人事業主",
+        "小規模事業者"
       ],
       "purpose_tags": [
         "人材育成",
@@ -658,7 +692,8 @@
         "申請書"
       ],
       "key_warnings": [
-        "和歌山県内の事業者限定"
+        "和歌山県内の事業者限定",
+        "従業員300人以下に限定"
       ],
       "plain_summary": "【わかやま産業振興財団 】外国出願補助金・新たな事業を行いたい / 販路拡大・海外展開をしたい / イベント・事業運営支援がほしい / 事業を引き継ぎたい / 研究開発・実証事業を行いたい / 人材育",
       "concrete_targets": [
@@ -667,7 +702,9 @@
       ],
       "difficulty": 3,
       "industry_inferred": false,
-      "industry_universal": false
+      "industry_universal": false,
+      "size_universal": false,
+      "size_inferred": false
     },
     {
       "id": "jgrants-S-00009056",
@@ -729,7 +766,9 @@
       ],
       "difficulty": 1,
       "industry_inferred": false,
-      "industry_universal": false
+      "industry_universal": false,
+      "size_universal": false,
+      "size_inferred": false
     },
     {
       "id": "jgrants-S-00009054",
@@ -755,7 +794,8 @@
       "size_tags": [
         "個人事業主",
         "中小企業",
-        "大企業"
+        "大企業",
+        "小規模事業者"
       ],
       "purpose_tags": [
         "販路開拓",
@@ -784,7 +824,8 @@
         "申請書"
       ],
       "key_warnings": [
-        "鳥取県内の事業者限定"
+        "鳥取県内の事業者限定",
+        "従業員300人以下に限定"
       ],
       "plain_summary": "【鳥取県】外国出願補助金・販路拡大・海外展開をしたい。最大3,000,000円まで。",
       "concrete_targets": [
@@ -794,7 +835,9 @@
       ],
       "difficulty": 3,
       "industry_inferred": false,
-      "industry_universal": false
+      "industry_universal": false,
+      "size_universal": false,
+      "size_inferred": false
     },
     {
       "id": "jgrants-S-00009047",
@@ -818,7 +861,9 @@
         "飲食"
       ],
       "size_tags": [
-        "中小企業"
+        "中小企業",
+        "個人事業主",
+        "小規模事業者"
       ],
       "purpose_tags": [
         "人材育成",
@@ -847,7 +892,8 @@
         "事業計画書"
       ],
       "key_warnings": [
-        "北海道内の事業者限定"
+        "北海道内の事業者限定",
+        "従業員300人以下に限定"
       ],
       "plain_summary": "北海道の「北海道経済構造の転換を図るための企業立地の促進及び中小企業の競争力の強化に関する条例」に基づき、道内の中小企業が取り組む製品開発、市場開拓、技術習得等を支援します（中小企業競争力強化促進事業",
       "concrete_targets": [
@@ -856,7 +902,9 @@
       ],
       "difficulty": 3,
       "industry_inferred": false,
-      "industry_universal": false
+      "industry_universal": false,
+      "size_universal": false,
+      "size_inferred": false
     },
     {
       "id": "jgrants-S-00009045",
@@ -880,7 +928,9 @@
         "飲食"
       ],
       "size_tags": [
-        "中小企業"
+        "中小企業",
+        "個人事業主",
+        "小規模事業者"
       ],
       "purpose_tags": [
         "設備投資",
@@ -909,7 +959,8 @@
         "事業計画書"
       ],
       "key_warnings": [
-        "北海道内の事業者限定"
+        "北海道内の事業者限定",
+        "従業員300人以下に限定"
       ],
       "plain_summary": "北海道の「北海道経済構造の転換を図るための企業立地の促進及び中小企業の競争力の強化に関する条例」に基づき、道内の中小企業が取り組む製品開発、市場開拓、技術習得等を支援します（中小企業競争力強化促進事業",
       "concrete_targets": [
@@ -918,7 +969,9 @@
       ],
       "difficulty": 2,
       "industry_inferred": false,
-      "industry_universal": false
+      "industry_universal": false,
+      "size_universal": false,
+      "size_inferred": false
     },
     {
       "id": "jgrants-S-00009041",
@@ -943,7 +996,8 @@
       ],
       "size_tags": [
         "個人事業主",
-        "中小企業"
+        "中小企業",
+        "小規模事業者"
       ],
       "purpose_tags": [
         "人材育成",
@@ -970,7 +1024,8 @@
         "事業計画書"
       ],
       "key_warnings": [
-        "北海道内の事業者限定"
+        "北海道内の事業者限定",
+        "従業員300人以下に限定"
       ],
       "plain_summary": "北海道の「北海道経済構造の転換を図るための企業立地の促進及び中小企業の競争力の強化に関する条例」に基づき、道内の中小企業が取り組む製品開発、市場開拓、技術習得等を支援します（中小企業競争力強化促進事業",
       "concrete_targets": [
@@ -980,7 +1035,9 @@
       ],
       "difficulty": 2,
       "industry_inferred": false,
-      "industry_universal": false
+      "industry_universal": false,
+      "size_universal": false,
+      "size_inferred": false
     },
     {
       "id": "jgrants-S-00009038",
@@ -1004,7 +1061,9 @@
         "飲食"
       ],
       "size_tags": [
-        "中小企業"
+        "中小企業",
+        "個人事業主",
+        "小規模事業者"
       ],
       "purpose_tags": [
         "販路開拓",
@@ -1034,7 +1093,8 @@
         "事業計画書"
       ],
       "key_warnings": [
-        "北海道内の事業者限定"
+        "北海道内の事業者限定",
+        "従業員300人以下に限定"
       ],
       "plain_summary": "北海道の「北海道経済構造の転換を図るための企業立地の促進及び中小企業の競争力の強化に関する条例」に基づき、道内の中小企業が取り組む製品開発、市場開拓、技術習得等を支援します（中小企業競争力強化促進事業",
       "concrete_targets": [
@@ -1043,7 +1103,9 @@
       ],
       "difficulty": 2,
       "industry_inferred": false,
-      "industry_universal": false
+      "industry_universal": false,
+      "size_universal": false,
+      "size_inferred": false
     },
     {
       "id": "jgrants-S-00009033",
@@ -1069,7 +1131,8 @@
       "size_tags": [
         "個人事業主",
         "中小企業",
-        "大企業"
+        "大企業",
+        "小規模事業者"
       ],
       "purpose_tags": [
         "人材育成",
@@ -1091,7 +1154,8 @@
         "申請書"
       ],
       "key_warnings": [
-        "千葉県内の事業者限定"
+        "千葉県内の事業者限定",
+        "従業員300人以下に限定"
       ],
       "plain_summary": "【千葉市産業振興財団】中小企業等海外展開支援事業・新たな事業を行いたい / 販路拡大・海外展開をしたい / イベント・事業運営支援がほしい / 事業を引き継ぎたい / 研究開発・実証事業を行いたい /",
       "difficulty": 3,
@@ -1106,7 +1170,9 @@
       "front_url": "https://www.jgrants-portal.go.jp/subsidy/a0WJ200000CDYm2MAH",
       "detail_fetched_at": "2026-05-14T23:59:11.994359+00:00",
       "industry_inferred": false,
-      "industry_universal": false
+      "industry_universal": false,
+      "size_universal": false,
+      "size_inferred": false
     },
     {
       "id": "jgrants-S-00009032",
@@ -1131,7 +1197,9 @@
       ],
       "size_tags": [
         "中小企業",
-        "大企業"
+        "大企業",
+        "個人事業主",
+        "小規模事業者"
       ],
       "purpose_tags": [
         "人材育成",
@@ -1161,7 +1229,8 @@
         "申請書"
       ],
       "key_warnings": [
-        "京都府内の事業者限定"
+        "京都府内の事業者限定",
+        "従業員300人以下に限定"
       ],
       "plain_summary": "【京都産業21】外国出願補助金・新たな事業を行いたい / 販路拡大・海外展開をしたい / イベント・事業運営支援がほしい / 事業を引き継ぎたい / 研究開発・実証事業を行いたい / 人材育成を行いた",
       "concrete_targets": [
@@ -1170,7 +1239,9 @@
       ],
       "difficulty": 3,
       "industry_inferred": false,
-      "industry_universal": false
+      "industry_universal": false,
+      "size_universal": false,
+      "size_inferred": false
     },
     {
       "id": "jgrants-S-00009030",
@@ -1195,7 +1266,9 @@
       ],
       "size_tags": [
         "中小企業",
-        "大企業"
+        "大企業",
+        "個人事業主",
+        "小規模事業者"
       ],
       "purpose_tags": [
         "人材育成",
@@ -1225,7 +1298,8 @@
         "申請書"
       ],
       "key_warnings": [
-        "滋賀県内の事業者限定"
+        "滋賀県内の事業者限定",
+        "従業員300人以下に限定"
       ],
       "plain_summary": "【滋賀県産業支援プラザ】外国出願補助金・新たな事業を行いたい / 販路拡大・海外展開をしたい / イベント・事業運営支援がほしい / 事業を引き継ぎたい / 研究開発・実証事業を行いたい / 人材育成",
       "concrete_targets": [
@@ -1234,7 +1308,9 @@
       ],
       "difficulty": 3,
       "industry_inferred": false,
-      "industry_universal": false
+      "industry_universal": false,
+      "size_universal": false,
+      "size_inferred": false
     },
     {
       "id": "jgrants-S-00009029",
@@ -1259,7 +1335,9 @@
       ],
       "size_tags": [
         "中小企業",
-        "大企業"
+        "大企業",
+        "個人事業主",
+        "小規模事業者"
       ],
       "purpose_tags": [
         "人材育成",
@@ -1289,7 +1367,8 @@
         "申請書"
       ],
       "key_warnings": [
-        "福井県内の事業者限定"
+        "福井県内の事業者限定",
+        "従業員300人以下に限定"
       ],
       "plain_summary": "【ふくい産業支援センター】外国出願補助金・新たな事業を行いたい / 販路拡大・海外展開をしたい / イベント・事業運営支援がほしい / 事業を引き継ぎたい / 研究開発・実証事業を行いたい / 人材育",
       "concrete_targets": [
@@ -1298,7 +1377,9 @@
       ],
       "difficulty": 3,
       "industry_inferred": false,
-      "industry_universal": false
+      "industry_universal": false,
+      "size_universal": false,
+      "size_inferred": false
     },
     {
       "id": "jgrants-S-00009015",
@@ -1357,7 +1438,9 @@
       ],
       "difficulty": 1,
       "industry_inferred": false,
-      "industry_universal": false
+      "industry_universal": false,
+      "size_universal": false,
+      "size_inferred": true
     },
     {
       "id": "jgrants-S-00009014",
@@ -1415,7 +1498,9 @@
       ],
       "difficulty": 1,
       "industry_inferred": false,
-      "industry_universal": false
+      "industry_universal": false,
+      "size_universal": false,
+      "size_inferred": true
     },
     {
       "id": "jgrants-S-00009011",
@@ -1439,7 +1524,9 @@
         "飲食"
       ],
       "size_tags": [
-        "中小企業"
+        "中小企業",
+        "個人事業主",
+        "小規模事業者"
       ],
       "purpose_tags": [
         "人材育成",
@@ -1466,7 +1553,8 @@
         "事業計画書"
       ],
       "key_warnings": [
-        "東京都内の事業者限定"
+        "東京都内の事業者限定",
+        "従業員300人以下に限定"
       ],
       "plain_summary": "福利厚生の充実で、若手人材の確保と定着を！・雇用・職場環境を改善したい。最大3,000,000円まで。",
       "concrete_targets": [
@@ -1475,7 +1563,9 @@
       ],
       "difficulty": 3,
       "industry_inferred": false,
-      "industry_universal": false
+      "industry_universal": false,
+      "size_universal": false,
+      "size_inferred": false
     },
     {
       "id": "jgrants-S-00009009",
@@ -1499,7 +1589,9 @@
         "飲食"
       ],
       "size_tags": [
-        "中小企業"
+        "中小企業",
+        "個人事業主",
+        "小規模事業者"
       ],
       "purpose_tags": [
         "人材育成",
@@ -1526,7 +1618,8 @@
         "事業計画書"
       ],
       "key_warnings": [
-        "東京都内の事業者限定"
+        "東京都内の事業者限定",
+        "従業員300人以下に限定"
       ],
       "plain_summary": "福利厚生の充実で、若手人材の確保と定着を！・雇用・職場環境を改善したい。最大3,000,000円まで。",
       "concrete_targets": [
@@ -1535,7 +1628,9 @@
       ],
       "difficulty": 3,
       "industry_inferred": false,
-      "industry_universal": false
+      "industry_universal": false,
+      "size_universal": false,
+      "size_inferred": false
     },
     {
       "id": "jgrants-S-00008999",
@@ -1560,7 +1655,9 @@
       ],
       "size_tags": [
         "中小企業",
-        "大企業"
+        "大企業",
+        "個人事業主",
+        "小規模事業者"
       ],
       "purpose_tags": [
         "販路開拓",
@@ -1589,7 +1686,8 @@
         "申請書"
       ],
       "key_warnings": [
-        "千葉県内の事業者限定"
+        "千葉県内の事業者限定",
+        "従業員300人以下に限定"
       ],
       "plain_summary": "【千葉県】令和８年度外国出願補助金・販路拡大・海外展開をしたい。最大3,000,000円まで。",
       "concrete_targets": [
@@ -1598,7 +1696,9 @@
       ],
       "difficulty": 3,
       "industry_inferred": false,
-      "industry_universal": false
+      "industry_universal": false,
+      "size_universal": false,
+      "size_inferred": false
     },
     {
       "id": "jgrants-S-00008989",
@@ -1659,7 +1759,9 @@
       ],
       "difficulty": 1,
       "industry_inferred": false,
-      "industry_universal": false
+      "industry_universal": false,
+      "size_universal": false,
+      "size_inferred": false
     },
     {
       "id": "jgrants-S-00008982",
@@ -1718,7 +1820,9 @@
       ],
       "difficulty": 5,
       "industry_inferred": false,
-      "industry_universal": false
+      "industry_universal": false,
+      "size_universal": false,
+      "size_inferred": true
     },
     {
       "id": "jgrants-S-00008981",
@@ -1779,7 +1883,9 @@
       ],
       "difficulty": 1,
       "industry_inferred": false,
-      "industry_universal": false
+      "industry_universal": false,
+      "size_universal": false,
+      "size_inferred": false
     },
     {
       "id": "jgrants-S-00008980",
@@ -1831,7 +1937,9 @@
       ],
       "difficulty": 1,
       "industry_inferred": true,
-      "industry_universal": false
+      "industry_universal": false,
+      "size_universal": false,
+      "size_inferred": true
     },
     {
       "id": "jgrants-S-00008971",
@@ -1857,7 +1965,8 @@
       "size_tags": [
         "小規模事業者",
         "中小企業",
-        "大企業"
+        "大企業",
+        "個人事業主"
       ],
       "purpose_tags": [
         "設備投資",
@@ -1885,7 +1994,8 @@
         "事業計画書"
       ],
       "key_warnings": [
-        "福島県内の事業者限定"
+        "福島県内の事業者限定",
+        "従業員300人以下に限定"
       ],
       "plain_summary": "特別高圧電気料金補助金・資金繰りを改善したい / 雇用・職場環境を改善したい / 設備整備・IT導入をしたい。最大0円まで。",
       "concrete_targets": [
@@ -1894,7 +2004,9 @@
       ],
       "difficulty": 1,
       "industry_inferred": false,
-      "industry_universal": false
+      "industry_universal": false,
+      "size_universal": false,
+      "size_inferred": false
     },
     {
       "id": "jgrants-S-00008969",
@@ -1918,7 +2030,9 @@
         "飲食"
       ],
       "size_tags": [
-        "中小企業"
+        "中小企業",
+        "個人事業主",
+        "小規模事業者"
       ],
       "purpose_tags": [
         "販路開拓",
@@ -1946,7 +2060,8 @@
         "申請書"
       ],
       "key_warnings": [
-        "北海道内の事業者限定"
+        "北海道内の事業者限定",
+        "従業員300人以下に限定"
       ],
       "plain_summary": "海外への事業展開を計画している道内中小企業者等が、特許・実用新案・意匠・商標（抜け駆け対策商標を含む）を海外へ出願する際に要する費用の一部を助成する制度です。 この度、２０２６年度の募集を開始します。",
       "concrete_targets": [
@@ -1955,7 +2070,9 @@
       ],
       "difficulty": 3,
       "industry_inferred": false,
-      "industry_universal": false
+      "industry_universal": false,
+      "size_universal": false,
+      "size_inferred": false
     },
     {
       "id": "jgrants-S-00008944",
@@ -1980,7 +2097,8 @@
       ],
       "size_tags": [
         "個人事業主",
-        "中小企業"
+        "中小企業",
+        "小規模事業者"
       ],
       "purpose_tags": [
         "設備投資",
@@ -2008,7 +2126,8 @@
         "申請書"
       ],
       "key_warnings": [
-        "福岡県内の事業者限定"
+        "福岡県内の事業者限定",
+        "従業員300人以下に限定"
       ],
       "plain_summary": "古賀市内中小企業・中堅企業のエネルギー価格高騰対策と脱炭素化を支援！太陽光発電設備導入費用を最大450万円補助します。・設備整備・IT導入をしたい / エコ・SDGs活動支援がほしい。最大4,500,",
       "concrete_targets": [
@@ -2018,7 +2137,9 @@
       ],
       "difficulty": 3,
       "industry_inferred": false,
-      "industry_universal": false
+      "industry_universal": false,
+      "size_universal": false,
+      "size_inferred": false
     },
     {
       "id": "jgrants-S-00008943",
@@ -2042,7 +2163,9 @@
         "飲食"
       ],
       "size_tags": [
-        "中小企業"
+        "中小企業",
+        "個人事業主",
+        "小規模事業者"
       ],
       "purpose_tags": [
         "設備投資",
@@ -2072,7 +2195,8 @@
         "申請書"
       ],
       "key_warnings": [
-        "福岡県内の事業者限定"
+        "福岡県内の事業者限定",
+        "従業員0人以下に限定"
       ],
       "plain_summary": "自社の温室効果ガス排出量を可視化するシステムの導入および使用経費を最大15万円補助します。・設備整備・IT導入をしたい / エコ・SDGs活動支援がほしい。最大150,000円まで。",
       "concrete_targets": [
@@ -2081,7 +2205,9 @@
       ],
       "difficulty": 1,
       "industry_inferred": false,
-      "industry_universal": false
+      "industry_universal": false,
+      "size_universal": false,
+      "size_inferred": false
     },
     {
       "id": "jgrants-S-00008921",
@@ -2106,7 +2232,9 @@
       ],
       "size_tags": [
         "中小企業",
-        "大企業"
+        "大企業",
+        "個人事業主",
+        "小規模事業者"
       ],
       "purpose_tags": [
         "人材育成",
@@ -2136,7 +2264,8 @@
         "申請書"
       ],
       "key_warnings": [
-        "愛知県内の事業者限定"
+        "愛知県内の事業者限定",
+        "従業員300人以下に限定"
       ],
       "plain_summary": "【あいち産業振興機構】外国出願補助金・新たな事業を行いたい / 販路拡大・海外展開をしたい / イベント・事業運営支援がほしい / 事業を引き継ぎたい / 研究開発・実証事業を行いたい / 人材育成を",
       "concrete_targets": [
@@ -2145,7 +2274,9 @@
       ],
       "difficulty": 3,
       "industry_inferred": false,
-      "industry_universal": false
+      "industry_universal": false,
+      "size_universal": false,
+      "size_inferred": false
     },
     {
       "id": "jgrants-S-00008920",
@@ -2200,7 +2331,9 @@
       ],
       "difficulty": 1,
       "industry_inferred": false,
-      "industry_universal": false
+      "industry_universal": false,
+      "size_universal": false,
+      "size_inferred": true
     },
     {
       "id": "jgrants-S-00008919",
@@ -2225,7 +2358,9 @@
       ],
       "size_tags": [
         "中小企業",
-        "大企業"
+        "大企業",
+        "個人事業主",
+        "小規模事業者"
       ],
       "purpose_tags": [
         "人材育成",
@@ -2255,7 +2390,8 @@
         "申請書"
       ],
       "key_warnings": [
-        "奈良県内の事業者限定"
+        "奈良県内の事業者限定",
+        "従業員300人以下に限定"
       ],
       "plain_summary": "【奈良県地域産業振興センター】外国出願補助金・新たな事業を行いたい / 販路拡大・海外展開をしたい / イベント・事業運営支援がほしい / 事業を引き継ぎたい / 研究開発・実証事業を行いたい / 人",
       "concrete_targets": [
@@ -2264,7 +2400,9 @@
       ],
       "difficulty": 3,
       "industry_inferred": false,
-      "industry_universal": false
+      "industry_universal": false,
+      "size_universal": false,
+      "size_inferred": false
     },
     {
       "id": "jgrants-S-00008918",
@@ -2289,7 +2427,9 @@
       ],
       "size_tags": [
         "中小企業",
-        "大企業"
+        "大企業",
+        "個人事業主",
+        "小規模事業者"
       ],
       "purpose_tags": [
         "販路開拓",
@@ -2318,7 +2458,8 @@
         "申請書"
       ],
       "key_warnings": [
-        "福岡県内の事業者限定"
+        "福岡県内の事業者限定",
+        "従業員300人以下に限定"
       ],
       "plain_summary": "【福岡県】外国出願補助金・新たな事業を行いたい / 販路拡大・海外展開をしたい / 研究開発・実証事業を行いたい / 資金繰りを改善したい / まちづくり・地域振興支援がほしい。最大3,000,000",
       "concrete_targets": [
@@ -2327,7 +2468,9 @@
       ],
       "difficulty": 3,
       "industry_inferred": false,
-      "industry_universal": false
+      "industry_universal": false,
+      "size_universal": false,
+      "size_inferred": false
     },
     {
       "id": "jgrants-S-00008910",
@@ -2387,7 +2530,9 @@
       ],
       "difficulty": 1,
       "industry_inferred": false,
-      "industry_universal": false
+      "industry_universal": false,
+      "size_universal": false,
+      "size_inferred": false
     },
     {
       "id": "jgrants-S-00008905",
@@ -2412,7 +2557,9 @@
       ],
       "size_tags": [
         "中小企業",
-        "大企業"
+        "大企業",
+        "個人事業主",
+        "小規模事業者"
       ],
       "purpose_tags": [
         "設備投資",
@@ -2441,7 +2588,8 @@
         "事業計画書"
       ],
       "key_warnings": [
-        "山口県内の事業者限定"
+        "山口県内の事業者限定",
+        "従業員300人以下に限定"
       ],
       "plain_summary": "自動車又は自動車部品の生産工程における低炭素化に資する設備等の導入を支援します。・設備整備・IT導入をしたい。最大10,000,000円まで。",
       "concrete_targets": [
@@ -2450,7 +2598,9 @@
       ],
       "difficulty": 4,
       "industry_inferred": false,
-      "industry_universal": false
+      "industry_universal": false,
+      "size_universal": false,
+      "size_inferred": false
     },
     {
       "id": "jgrants-S-00008904",
@@ -2507,7 +2657,9 @@
       ],
       "difficulty": 4,
       "industry_inferred": false,
-      "industry_universal": false
+      "industry_universal": false,
+      "size_universal": false,
+      "size_inferred": true
     },
     {
       "id": "jgrants-S-00008888",
@@ -2532,7 +2684,9 @@
       ],
       "size_tags": [
         "中小企業",
-        "大企業"
+        "大企業",
+        "個人事業主",
+        "小規模事業者"
       ],
       "purpose_tags": [
         "IT導入",
@@ -2563,7 +2717,8 @@
         "申請書"
       ],
       "key_warnings": [
-        "岐阜県内の事業者限定"
+        "岐阜県内の事業者限定",
+        "従業員300人以下に限定"
       ],
       "plain_summary": "【岐阜県産業経済振興センター】外国出願補助金・新たな事業を行いたい / 販路拡大・海外展開をしたい / イベント・事業運営支援がほしい / 事業を引き継ぎたい / 研究開発・実証事業を行いたい / 人",
       "concrete_targets": [
@@ -2572,7 +2727,9 @@
       ],
       "difficulty": 3,
       "industry_inferred": false,
-      "industry_universal": false
+      "industry_universal": false,
+      "size_universal": false,
+      "size_inferred": false
     },
     {
       "id": "jgrants-S-00008881",
@@ -2628,7 +2785,9 @@
       ],
       "difficulty": 5,
       "industry_inferred": false,
-      "industry_universal": false
+      "industry_universal": false,
+      "size_universal": false,
+      "size_inferred": true
     },
     {
       "id": "jgrants-S-00008879",
@@ -2686,7 +2845,9 @@
       ],
       "difficulty": 4,
       "industry_inferred": false,
-      "industry_universal": false
+      "industry_universal": false,
+      "size_universal": false,
+      "size_inferred": true
     },
     {
       "id": "jgrants-S-00008876",
@@ -2751,7 +2912,9 @@
       ],
       "difficulty": 1,
       "industry_inferred": false,
-      "industry_universal": false
+      "industry_universal": false,
+      "size_universal": false,
+      "size_inferred": false
     },
     {
       "id": "jgrants-S-00008874",
@@ -2806,7 +2969,9 @@
       ],
       "difficulty": 4,
       "industry_inferred": false,
-      "industry_universal": false
+      "industry_universal": false,
+      "size_universal": false,
+      "size_inferred": false
     },
     {
       "id": "jgrants-S-00008872",
@@ -2862,7 +3027,9 @@
       ],
       "difficulty": 1,
       "industry_inferred": false,
-      "industry_universal": false
+      "industry_universal": false,
+      "size_universal": false,
+      "size_inferred": true
     },
     {
       "id": "jgrants-S-00008861",
@@ -2921,7 +3088,9 @@
       ],
       "difficulty": 3,
       "industry_inferred": false,
-      "industry_universal": false
+      "industry_universal": false,
+      "size_universal": false,
+      "size_inferred": false
     },
     {
       "id": "jgrants-S-00008855",
@@ -2974,7 +3143,9 @@
       ],
       "difficulty": 5,
       "industry_inferred": true,
-      "industry_universal": false
+      "industry_universal": false,
+      "size_universal": false,
+      "size_inferred": true
     },
     {
       "id": "jgrants-S-00008854",
@@ -3032,7 +3203,9 @@
       ],
       "difficulty": 5,
       "industry_inferred": false,
-      "industry_universal": false
+      "industry_universal": false,
+      "size_universal": false,
+      "size_inferred": true
     }
   ],
   "fetched_at": "2026-05-14T23:59:07.001042+00:00"
