@@ -178,6 +178,24 @@ a:hover { text-decoration: underline; }
   background: #f0eef8;
   color: #4a3a6a;
 }
+/* Phase 1 (TECH_DEF §1.1): 全業種対象 (universal=true) を示すバッジ */
+.tag-universal {
+  background: #e8f5e9;
+  color: #1b5e20;
+  font-weight: 600;
+}
+/* Phase 1 (TECH_DEF §4.4): inferred=true (AI 推測) を示すバッジ */
+.inferred-badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  color: #888;
+  background: #f0f0f0;
+  padding: 1px 6px;
+  border-radius: 999px;
+  margin-left: 4px;
+  vertical-align: middle;
+  font-style: italic;
+}
 
 .card-meta {
   display: grid;

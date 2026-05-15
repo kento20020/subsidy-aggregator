@@ -42,6 +42,17 @@
     return false;
   }
 
+  // Phase 1 (TECH_DEF §1.1): industry は universal フィールドの特別扱い
+  function matchesIndustry(card, selected) {
+    if (selected.length === 0) return true;
+    if (card.dataset.industryUniversal === "true") return true; // 全業種対象は常にマッチ
+    var arr = (card.dataset.industry || "").split(",").filter(Boolean);
+    for (var i = 0; i < selected.length; i++) {
+      if (arr.indexOf(selected[i]) !== -1) return true;
+    }
+    return false;
+  }
+
   function withinDeadline(deadlineStr, days) {
     if (days === "all" || !deadlineStr) return days === "all";
     var d = new Date(deadlineStr + "T23:59:59Z");
@@ -151,7 +162,7 @@
     var visibleCount = 0;
     cards.forEach(function (card) {
       var ok =
-        matchesTag(card.dataset.industry || "", industries) &&
+        matchesIndustry(card, industries) &&
         matchesTag(card.dataset.size || "", sizes) &&
         matchesTag(card.dataset.purpose || "", purposes) &&
         matchesPrefecture(card.dataset.prefecture || "", prefMode) &&

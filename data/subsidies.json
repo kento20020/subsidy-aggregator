@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-14T23:59:12.927726+00:00",
+  "updated_at": "2026-05-15T14:38:56.123873+00:00",
   "total": 50,
   "subsidies": [
     {
@@ -17,18 +17,37 @@
       "first_seen_at": "2026-05-14T23:59:06.990783+00:00",
       "updated_at": "2026-05-14T23:59:06.990783+00:00",
       "is_new": true,
-      "tag_status": "failed",
-      "industry_tags": [],
-      "size_tags": [],
-      "purpose_tags": [],
-      "concrete_targets": [],
-      "eligible_expenses": [],
-      "required_documents": [],
+      "tag_status": "mocked",
+      "industry_tags": [
+        "IT",
+        "製造業",
+        "飲食"
+      ],
+      "size_tags": [
+        "中小企業",
+        "大企業"
+      ],
+      "purpose_tags": [
+        "IT導入",
+        "研究開発"
+      ],
+      "concrete_targets": [
+        "中小企業",
+        "スタートアップ",
+        "従業員数の制約なし"
+      ],
+      "eligible_expenses": [
+        "対象経費(本文参照)"
+      ],
+      "required_documents": [
+        "申請書",
+        "事業計画書"
+      ],
       "key_warnings": [],
-      "plain_summary": "",
-      "difficulty": 0,
+      "plain_summary": "環境分野のスタートアップ企業や起業を目指す方へ・研究開発・実証事業を行いたい。最大400,000,000円まで。",
+      "difficulty": 5,
       "urgency": 2,
-      "amount_max": 0,
+      "amount_max": 40000,
       "body_html_len": 4094,
       "catch_phrase": "環境分野のスタートアップ企業や起業を目指す方へ",
       "use_purpose_text": "研究開発・実証事業を行いたい",
@@ -36,7 +55,9 @@
       "subsidy_rate_official": "ベンチャーキャピタル等からの出融資額の2倍の額又は補助対象経費のいずれか低い額",
       "project_end_deadline": null,
       "front_url": "https://www.jgrants-portal.go.jp/subsidy/a0WJ200000CDYuDMAX",
-      "detail_fetched_at": "2026-05-14T23:59:07.823480+00:00"
+      "detail_fetched_at": "2026-05-14T23:59:07.823480+00:00",
+      "industry_inferred": false,
+      "industry_universal": false
     },
     {
       "id": "jgrants-S-00009120",
@@ -53,16 +74,37 @@
       "first_seen_at": "2026-05-14T23:59:06.990783+00:00",
       "updated_at": "2026-05-14T23:59:06.990783+00:00",
       "is_new": true,
-      "tag_status": "failed",
-      "industry_tags": [],
-      "size_tags": [],
-      "purpose_tags": [],
-      "concrete_targets": [],
-      "eligible_expenses": [],
-      "required_documents": [],
+      "tag_status": "mocked",
+      "industry_tags": [
+        "IT",
+        "製造業",
+        "飲食"
+      ],
+      "size_tags": [
+        "中小企業",
+        "大企業"
+      ],
+      "purpose_tags": [
+        "IT導入",
+        "人材育成",
+        "販路開拓",
+        "研究開発"
+      ],
+      "concrete_targets": [
+        "中小企業",
+        "スタートアップ",
+        "従業員数の制約なし"
+      ],
+      "eligible_expenses": [
+        "対象経費(本文参照)"
+      ],
+      "required_documents": [
+        "申請書",
+        "事業計画書"
+      ],
       "key_warnings": [],
-      "plain_summary": "",
-      "difficulty": 0,
+      "plain_summary": "環境分野のスタートアップ企業や起業を目指す方へ・研究開発・実証事業を行いたい。最大0円まで。",
+      "difficulty": 1,
       "urgency": 2,
       "amount_max": 0,
       "body_html_len": 6191,
@@ -72,7 +114,9 @@
       "subsidy_rate_official": "",
       "project_end_deadline": null,
       "front_url": "https://www.jgrants-portal.go.jp/subsidy/a0WJ200000CDYu8MAH",
-      "detail_fetched_at": "2026-05-14T23:59:08.979199+00:00"
+      "detail_fetched_at": "2026-05-14T23:59:08.979199+00:00",
+      "industry_inferred": false,
+      "industry_universal": false
     },
     {
       "id": "jgrants-S-00009118",
@@ -89,18 +133,37 @@
       "first_seen_at": "2026-05-14T23:59:06.990783+00:00",
       "updated_at": "2026-05-14T23:59:06.990783+00:00",
       "is_new": true,
-      "tag_status": "failed",
-      "industry_tags": [],
-      "size_tags": [],
-      "purpose_tags": [],
-      "concrete_targets": [],
-      "eligible_expenses": [],
-      "required_documents": [],
+      "tag_status": "mocked",
+      "industry_tags": [
+        "IT",
+        "製造業",
+        "飲食"
+      ],
+      "size_tags": [
+        "中小企業",
+        "大企業"
+      ],
+      "purpose_tags": [
+        "IT導入",
+        "研究開発"
+      ],
+      "concrete_targets": [
+        "中小企業",
+        "スタートアップ",
+        "従業員数の制約なし"
+      ],
+      "eligible_expenses": [
+        "対象経費(本文参照)"
+      ],
+      "required_documents": [
+        "申請書",
+        "事業計画書"
+      ],
       "key_warnings": [],
-      "plain_summary": "",
-      "difficulty": 0,
+      "plain_summary": "環境分野のスタートアップ企業や起業を目指す方へ・研究開発・実証事業を行いたい。最大4,000,000円まで。",
+      "difficulty": 3,
       "urgency": 2,
-      "amount_max": 0,
+      "amount_max": 400,
       "body_html_len": 4280,
       "catch_phrase": "環境分野のスタートアップ企業や起業を目指す方へ",
       "use_purpose_text": "研究開発・実証事業を行いたい",
@@ -108,7 +171,9 @@
       "subsidy_rate_official": "補助対象経費の10分の10",
       "project_end_deadline": null,
       "front_url": "https://www.jgrants-portal.go.jp/subsidy/a0WJ200000CDYtyMAH",
-      "detail_fetched_at": "2026-05-14T23:59:09.968605+00:00"
+      "detail_fetched_at": "2026-05-14T23:59:09.968605+00:00",
+      "industry_inferred": false,
+      "industry_universal": false
     },
     {
       "id": "jgrants-S-00009101",
@@ -129,11 +194,7 @@
       "industry_tags": [
         "IT",
         "製造業",
-        "飲食",
-        "建設",
-        "小売",
-        "医療",
-        "教育"
+        "飲食"
       ],
       "size_tags": [
         "中小企業"
@@ -168,7 +229,9 @@
       "subsidy_rate_official": "2分の1（1,000円未満切捨て）",
       "project_end_deadline": null,
       "front_url": "https://www.jgrants-portal.go.jp/subsidy/a0WJ200000CDYsSMAX",
-      "detail_fetched_at": "2026-05-14T00:01:35.446228+00:00"
+      "detail_fetched_at": "2026-05-14T00:01:35.446228+00:00",
+      "industry_inferred": false,
+      "industry_universal": false
     },
     {
       "id": "jgrants-S-00009099",
@@ -189,12 +252,7 @@
       "industry_tags": [
         "IT",
         "製造業",
-        "飲食",
-        "農業",
-        "建設",
-        "小売",
-        "医療",
-        "教育"
+        "飲食"
       ],
       "size_tags": [
         "小規模事業者",
@@ -235,7 +293,9 @@
         "小規模事業者",
         "従業員数の制約なし"
       ],
-      "difficulty": 3
+      "difficulty": 3,
+      "industry_inferred": false,
+      "industry_universal": false
     },
     {
       "id": "jgrants-S-00009095",
@@ -256,12 +316,7 @@
       "industry_tags": [
         "IT",
         "製造業",
-        "飲食",
-        "農業",
-        "建設",
-        "小売",
-        "医療",
-        "教育"
+        "飲食"
       ],
       "size_tags": [
         "中小企業",
@@ -301,7 +356,9 @@
         "中小企業",
         "300名以下"
       ],
-      "difficulty": 3
+      "difficulty": 3,
+      "industry_inferred": false,
+      "industry_universal": false
     },
     {
       "id": "jgrants-S-00009079",
@@ -322,12 +379,7 @@
       "industry_tags": [
         "IT",
         "製造業",
-        "飲食",
-        "農業",
-        "建設",
-        "小売",
-        "医療",
-        "教育"
+        "飲食"
       ],
       "size_tags": [
         "中小企業",
@@ -367,7 +419,9 @@
         "中小企業",
         "300名以下"
       ],
-      "difficulty": 3
+      "difficulty": 3,
+      "industry_inferred": false,
+      "industry_universal": false
     },
     {
       "id": "jgrants-S-00009065",
@@ -384,18 +438,40 @@
       "first_seen_at": "2026-05-14T23:59:06.990783+00:00",
       "updated_at": "2026-05-14T23:59:06.990783+00:00",
       "is_new": true,
-      "tag_status": "failed",
-      "industry_tags": [],
-      "size_tags": [],
-      "purpose_tags": [],
-      "concrete_targets": [],
-      "eligible_expenses": [],
-      "required_documents": [],
-      "key_warnings": [],
-      "plain_summary": "",
-      "difficulty": 0,
+      "tag_status": "mocked",
+      "industry_tags": [
+        "IT",
+        "製造業",
+        "飲食"
+      ],
+      "size_tags": [
+        "中小企業",
+        "大企業"
+      ],
+      "purpose_tags": [
+        "販路開拓",
+        "研究開発",
+        "海外展開"
+      ],
+      "concrete_targets": [
+        "中小企業",
+        "300名以下"
+      ],
+      "eligible_expenses": [
+        "出願手数料",
+        "翻訳費",
+        "代理人費用"
+      ],
+      "required_documents": [
+        "申請書"
+      ],
+      "key_warnings": [
+        "長野県内の事業者限定"
+      ],
+      "plain_summary": "【長野県】令和８年度「中小企業等海外出願支援事業補助金」募集のご案内・販路拡大・海外展開をしたい。最大3,000,000円まで。",
+      "difficulty": 3,
       "urgency": 2,
-      "amount_max": 0,
+      "amount_max": 300,
       "body_html_len": 4164,
       "catch_phrase": "【長野県】令和８年度「中小企業等海外出願支援事業補助金」募集のご案内",
       "use_purpose_text": "販路拡大・海外展開をしたい",
@@ -403,7 +479,9 @@
       "subsidy_rate_official": "1/2",
       "project_end_deadline": "2026-01-31",
       "front_url": "https://www.jgrants-portal.go.jp/subsidy/a0WJ200000CDYooMAH",
-      "detail_fetched_at": "2026-05-14T23:59:10.993738+00:00"
+      "detail_fetched_at": "2026-05-14T23:59:10.993738+00:00",
+      "industry_inferred": false,
+      "industry_universal": false
     },
     {
       "id": "jgrants-S-00009061",
@@ -424,12 +502,7 @@
       "industry_tags": [
         "IT",
         "製造業",
-        "飲食",
-        "農業",
-        "建設",
-        "小売",
-        "医療",
-        "教育"
+        "飲食"
       ],
       "size_tags": [
         "中小企業"
@@ -463,7 +536,9 @@
       "concrete_targets": [
         "従業員数の制約なし"
       ],
-      "difficulty": 4
+      "difficulty": 4,
+      "industry_inferred": false,
+      "industry_universal": false
     },
     {
       "id": "jgrants-S-00009060",
@@ -484,12 +559,7 @@
       "industry_tags": [
         "IT",
         "製造業",
-        "飲食",
-        "農業",
-        "建設",
-        "小売",
-        "医療",
-        "教育"
+        "飲食"
       ],
       "size_tags": [
         "中小企業",
@@ -531,7 +601,9 @@
         "中小企業",
         "300名以下"
       ],
-      "difficulty": 3
+      "difficulty": 3,
+      "industry_inferred": false,
+      "industry_universal": false
     },
     {
       "id": "jgrants-S-00009057",
@@ -552,12 +624,7 @@
       "industry_tags": [
         "IT",
         "製造業",
-        "飲食",
-        "農業",
-        "建設",
-        "小売",
-        "医療",
-        "教育"
+        "飲食"
       ],
       "size_tags": [
         "中小企業",
@@ -598,7 +665,9 @@
         "中小企業",
         "300名以下"
       ],
-      "difficulty": 3
+      "difficulty": 3,
+      "industry_inferred": false,
+      "industry_universal": false
     },
     {
       "id": "jgrants-S-00009056",
@@ -619,12 +688,7 @@
       "industry_tags": [
         "IT",
         "製造業",
-        "飲食",
-        "農業",
-        "建設",
-        "小売",
-        "医療",
-        "教育"
+        "飲食"
       ],
       "size_tags": [
         "個人事業主"
@@ -663,7 +727,9 @@
         "創業",
         "従業員数の制約なし"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "industry_inferred": false,
+      "industry_universal": false
     },
     {
       "id": "jgrants-S-00009054",
@@ -684,12 +750,7 @@
       "industry_tags": [
         "IT",
         "製造業",
-        "飲食",
-        "農業",
-        "建設",
-        "小売",
-        "医療",
-        "教育"
+        "飲食"
       ],
       "size_tags": [
         "個人事業主",
@@ -731,7 +792,9 @@
         "個人事業主",
         "300名以下"
       ],
-      "difficulty": 3
+      "difficulty": 3,
+      "industry_inferred": false,
+      "industry_universal": false
     },
     {
       "id": "jgrants-S-00009047",
@@ -752,11 +815,7 @@
       "industry_tags": [
         "IT",
         "製造業",
-        "飲食",
-        "建設",
-        "小売",
-        "医療",
-        "教育"
+        "飲食"
       ],
       "size_tags": [
         "中小企業"
@@ -795,7 +854,9 @@
         "中小企業",
         "300名以下"
       ],
-      "difficulty": 3
+      "difficulty": 3,
+      "industry_inferred": false,
+      "industry_universal": false
     },
     {
       "id": "jgrants-S-00009045",
@@ -816,11 +877,7 @@
       "industry_tags": [
         "IT",
         "製造業",
-        "飲食",
-        "建設",
-        "小売",
-        "医療",
-        "教育"
+        "飲食"
       ],
       "size_tags": [
         "中小企業"
@@ -859,7 +916,9 @@
         "中小企業",
         "300名以下"
       ],
-      "difficulty": 2
+      "difficulty": 2,
+      "industry_inferred": false,
+      "industry_universal": false
     },
     {
       "id": "jgrants-S-00009041",
@@ -880,11 +939,7 @@
       "industry_tags": [
         "IT",
         "製造業",
-        "飲食",
-        "建設",
-        "小売",
-        "医療",
-        "教育"
+        "飲食"
       ],
       "size_tags": [
         "個人事業主",
@@ -923,7 +978,9 @@
         "個人事業主",
         "300名以下"
       ],
-      "difficulty": 2
+      "difficulty": 2,
+      "industry_inferred": false,
+      "industry_universal": false
     },
     {
       "id": "jgrants-S-00009038",
@@ -944,11 +1001,7 @@
       "industry_tags": [
         "IT",
         "製造業",
-        "飲食",
-        "建設",
-        "小売",
-        "医療",
-        "教育"
+        "飲食"
       ],
       "size_tags": [
         "中小企業"
@@ -988,7 +1041,9 @@
         "中小企業",
         "300名以下"
       ],
-      "difficulty": 2
+      "difficulty": 2,
+      "industry_inferred": false,
+      "industry_universal": false
     },
     {
       "id": "jgrants-S-00009033",
@@ -1005,18 +1060,43 @@
       "first_seen_at": "2026-05-14T23:59:06.990783+00:00",
       "updated_at": "2026-05-14T23:59:06.990783+00:00",
       "is_new": true,
-      "tag_status": "failed",
-      "industry_tags": [],
-      "size_tags": [],
-      "purpose_tags": [],
-      "concrete_targets": [],
-      "eligible_expenses": [],
-      "required_documents": [],
-      "key_warnings": [],
-      "plain_summary": "",
-      "difficulty": 0,
+      "tag_status": "mocked",
+      "industry_tags": [
+        "IT",
+        "製造業",
+        "飲食"
+      ],
+      "size_tags": [
+        "個人事業主",
+        "中小企業",
+        "大企業"
+      ],
+      "purpose_tags": [
+        "人材育成",
+        "販路開拓",
+        "研究開発",
+        "海外展開"
+      ],
+      "concrete_targets": [
+        "中小企業",
+        "個人事業主",
+        "300名以下"
+      ],
+      "eligible_expenses": [
+        "出願手数料",
+        "翻訳費",
+        "代理人費用"
+      ],
+      "required_documents": [
+        "申請書"
+      ],
+      "key_warnings": [
+        "千葉県内の事業者限定"
+      ],
+      "plain_summary": "【千葉市産業振興財団】中小企業等海外展開支援事業・新たな事業を行いたい / 販路拡大・海外展開をしたい / イベント・事業運営支援がほしい / 事業を引き継ぎたい / 研究開発・実証事業を行いたい /",
+      "difficulty": 3,
       "urgency": 4,
-      "amount_max": 0,
+      "amount_max": 300,
       "body_html_len": 2990,
       "catch_phrase": "【千葉市産業振興財団】中小企業等海外展開支援事業",
       "use_purpose_text": "新たな事業を行いたい / 販路拡大・海外展開をしたい / イベント・事業運営支援がほしい / 事業を引き継ぎたい / 研究開発・実証事業を行いたい / 人材育成を行いたい / 資金繰りを改善したい /…",
@@ -1024,7 +1104,9 @@
       "subsidy_rate_official": "1/2",
       "project_end_deadline": "2027-03-31",
       "front_url": "https://www.jgrants-portal.go.jp/subsidy/a0WJ200000CDYm2MAH",
-      "detail_fetched_at": "2026-05-14T23:59:11.994359+00:00"
+      "detail_fetched_at": "2026-05-14T23:59:11.994359+00:00",
+      "industry_inferred": false,
+      "industry_universal": false
     },
     {
       "id": "jgrants-S-00009032",
@@ -1045,12 +1127,7 @@
       "industry_tags": [
         "IT",
         "製造業",
-        "飲食",
-        "農業",
-        "建設",
-        "小売",
-        "医療",
-        "教育"
+        "飲食"
       ],
       "size_tags": [
         "中小企業",
@@ -1091,7 +1168,9 @@
         "中小企業",
         "300名以下"
       ],
-      "difficulty": 3
+      "difficulty": 3,
+      "industry_inferred": false,
+      "industry_universal": false
     },
     {
       "id": "jgrants-S-00009030",
@@ -1112,12 +1191,7 @@
       "industry_tags": [
         "IT",
         "製造業",
-        "飲食",
-        "農業",
-        "建設",
-        "小売",
-        "医療",
-        "教育"
+        "飲食"
       ],
       "size_tags": [
         "中小企業",
@@ -1158,7 +1232,9 @@
         "中小企業",
         "300名以下"
       ],
-      "difficulty": 3
+      "difficulty": 3,
+      "industry_inferred": false,
+      "industry_universal": false
     },
     {
       "id": "jgrants-S-00009029",
@@ -1179,12 +1255,7 @@
       "industry_tags": [
         "IT",
         "製造業",
-        "飲食",
-        "農業",
-        "建設",
-        "小売",
-        "医療",
-        "教育"
+        "飲食"
       ],
       "size_tags": [
         "中小企業",
@@ -1225,7 +1296,9 @@
         "中小企業",
         "300名以下"
       ],
-      "difficulty": 3
+      "difficulty": 3,
+      "industry_inferred": false,
+      "industry_universal": false
     },
     {
       "id": "jgrants-S-00009015",
@@ -1246,8 +1319,7 @@
       "industry_tags": [
         "IT",
         "製造業",
-        "農業",
-        "小売"
+        "農業"
       ],
       "size_tags": [
         "中小企業"
@@ -1283,7 +1355,9 @@
       "concrete_targets": [
         "従業員数の制約なし"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "industry_inferred": false,
+      "industry_universal": false
     },
     {
       "id": "jgrants-S-00009014",
@@ -1304,8 +1378,7 @@
       "industry_tags": [
         "IT",
         "製造業",
-        "農業",
-        "小売"
+        "農業"
       ],
       "size_tags": [
         "中小企業"
@@ -1340,7 +1413,9 @@
       "concrete_targets": [
         "従業員数の制約なし"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "industry_inferred": false,
+      "industry_universal": false
     },
     {
       "id": "jgrants-S-00009011",
@@ -1361,12 +1436,7 @@
       "industry_tags": [
         "IT",
         "製造業",
-        "飲食",
-        "農業",
-        "建設",
-        "小売",
-        "医療",
-        "教育"
+        "飲食"
       ],
       "size_tags": [
         "中小企業"
@@ -1403,7 +1473,9 @@
         "中小企業",
         "300名以下"
       ],
-      "difficulty": 3
+      "difficulty": 3,
+      "industry_inferred": false,
+      "industry_universal": false
     },
     {
       "id": "jgrants-S-00009009",
@@ -1424,12 +1496,7 @@
       "industry_tags": [
         "IT",
         "製造業",
-        "飲食",
-        "農業",
-        "建設",
-        "小売",
-        "医療",
-        "教育"
+        "飲食"
       ],
       "size_tags": [
         "中小企業"
@@ -1466,7 +1533,9 @@
         "中小企業",
         "300名以下"
       ],
-      "difficulty": 3
+      "difficulty": 3,
+      "industry_inferred": false,
+      "industry_universal": false
     },
     {
       "id": "jgrants-S-00008999",
@@ -1487,12 +1556,7 @@
       "industry_tags": [
         "IT",
         "製造業",
-        "飲食",
-        "農業",
-        "建設",
-        "小売",
-        "医療",
-        "教育"
+        "飲食"
       ],
       "size_tags": [
         "中小企業",
@@ -1532,7 +1596,9 @@
         "中小企業",
         "300名以下"
       ],
-      "difficulty": 3
+      "difficulty": 3,
+      "industry_inferred": false,
+      "industry_universal": false
     },
     {
       "id": "jgrants-S-00008989",
@@ -1553,12 +1619,7 @@
       "industry_tags": [
         "IT",
         "製造業",
-        "飲食",
-        "農業",
-        "建設",
-        "小売",
-        "医療",
-        "教育"
+        "飲食"
       ],
       "size_tags": [
         "小規模事業者",
@@ -1596,7 +1657,9 @@
         "小規模事業者",
         "従業員数の制約なし"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "industry_inferred": false,
+      "industry_universal": false
     },
     {
       "id": "jgrants-S-00008982",
@@ -1617,12 +1680,7 @@
       "industry_tags": [
         "IT",
         "製造業",
-        "飲食",
-        "農業",
-        "建設",
-        "小売",
-        "医療",
-        "教育"
+        "飲食"
       ],
       "size_tags": [
         "中小企業"
@@ -1658,7 +1716,9 @@
       "concrete_targets": [
         "従業員数の制約なし"
       ],
-      "difficulty": 5
+      "difficulty": 5,
+      "industry_inferred": false,
+      "industry_universal": false
     },
     {
       "id": "jgrants-S-00008981",
@@ -1679,12 +1739,7 @@
       "industry_tags": [
         "IT",
         "製造業",
-        "飲食",
-        "農業",
-        "建設",
-        "小売",
-        "医療",
-        "教育"
+        "飲食"
       ],
       "size_tags": [
         "個人事業主"
@@ -1722,7 +1777,9 @@
         "個人事業主",
         "従業員数の制約なし"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "industry_inferred": false,
+      "industry_universal": false
     },
     {
       "id": "jgrants-S-00008980",
@@ -1740,9 +1797,7 @@
       "updated_at": "2026-05-13T02:45:45.758075+00:00",
       "is_new": true,
       "tag_status": "mocked",
-      "industry_tags": [
-        "全業種"
-      ],
+      "industry_tags": [],
       "size_tags": [
         "中小企業"
       ],
@@ -1774,7 +1829,9 @@
       "concrete_targets": [
         "従業員数の制約なし"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "industry_inferred": true,
+      "industry_universal": false
     },
     {
       "id": "jgrants-S-00008971",
@@ -1795,9 +1852,7 @@
       "industry_tags": [
         "IT",
         "製造業",
-        "飲食",
-        "建設",
-        "小売"
+        "飲食"
       ],
       "size_tags": [
         "小規模事業者",
@@ -1837,7 +1892,9 @@
         "中小企業",
         "300名以下"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "industry_inferred": false,
+      "industry_universal": false
     },
     {
       "id": "jgrants-S-00008969",
@@ -1858,11 +1915,7 @@
       "industry_tags": [
         "IT",
         "製造業",
-        "飲食",
-        "建設",
-        "小売",
-        "医療",
-        "教育"
+        "飲食"
       ],
       "size_tags": [
         "中小企業"
@@ -1900,7 +1953,9 @@
         "中小企業",
         "300名以下"
       ],
-      "difficulty": 3
+      "difficulty": 3,
+      "industry_inferred": false,
+      "industry_universal": false
     },
     {
       "id": "jgrants-S-00008944",
@@ -1921,12 +1976,7 @@
       "industry_tags": [
         "IT",
         "製造業",
-        "飲食",
-        "農業",
-        "建設",
-        "小売",
-        "医療",
-        "教育"
+        "飲食"
       ],
       "size_tags": [
         "個人事業主",
@@ -1966,7 +2016,9 @@
         "個人事業主",
         "従業員数の制約なし"
       ],
-      "difficulty": 3
+      "difficulty": 3,
+      "industry_inferred": false,
+      "industry_universal": false
     },
     {
       "id": "jgrants-S-00008943",
@@ -1987,12 +2039,7 @@
       "industry_tags": [
         "IT",
         "製造業",
-        "飲食",
-        "農業",
-        "建設",
-        "小売",
-        "医療",
-        "教育"
+        "飲食"
       ],
       "size_tags": [
         "中小企業"
@@ -2032,7 +2079,9 @@
         "中小企業",
         "従業員数の制約なし"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "industry_inferred": false,
+      "industry_universal": false
     },
     {
       "id": "jgrants-S-00008921",
@@ -2053,12 +2102,7 @@
       "industry_tags": [
         "IT",
         "製造業",
-        "飲食",
-        "農業",
-        "建設",
-        "小売",
-        "医療",
-        "教育"
+        "飲食"
       ],
       "size_tags": [
         "中小企業",
@@ -2099,7 +2143,9 @@
         "中小企業",
         "300名以下"
       ],
-      "difficulty": 3
+      "difficulty": 3,
+      "industry_inferred": false,
+      "industry_universal": false
     },
     {
       "id": "jgrants-S-00008920",
@@ -2152,7 +2198,9 @@
       "concrete_targets": [
         "従業員数の制約なし"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "industry_inferred": false,
+      "industry_universal": false
     },
     {
       "id": "jgrants-S-00008919",
@@ -2173,12 +2221,7 @@
       "industry_tags": [
         "IT",
         "製造業",
-        "飲食",
-        "農業",
-        "建設",
-        "小売",
-        "医療",
-        "教育"
+        "飲食"
       ],
       "size_tags": [
         "中小企業",
@@ -2219,7 +2262,9 @@
         "中小企業",
         "300名以下"
       ],
-      "difficulty": 3
+      "difficulty": 3,
+      "industry_inferred": false,
+      "industry_universal": false
     },
     {
       "id": "jgrants-S-00008918",
@@ -2240,12 +2285,7 @@
       "industry_tags": [
         "IT",
         "製造業",
-        "飲食",
-        "農業",
-        "建設",
-        "小売",
-        "医療",
-        "教育"
+        "飲食"
       ],
       "size_tags": [
         "中小企業",
@@ -2285,7 +2325,9 @@
         "中小企業",
         "300名以下"
       ],
-      "difficulty": 3
+      "difficulty": 3,
+      "industry_inferred": false,
+      "industry_universal": false
     },
     {
       "id": "jgrants-S-00008910",
@@ -2306,12 +2348,7 @@
       "industry_tags": [
         "IT",
         "製造業",
-        "飲食",
-        "農業",
-        "建設",
-        "小売",
-        "医療",
-        "教育"
+        "飲食"
       ],
       "size_tags": [
         "個人事業主"
@@ -2348,7 +2385,9 @@
         "個人事業主",
         "従業員数の制約なし"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "industry_inferred": false,
+      "industry_universal": false
     },
     {
       "id": "jgrants-S-00008905",
@@ -2369,8 +2408,7 @@
       "industry_tags": [
         "IT",
         "製造業",
-        "建設",
-        "小売"
+        "建設"
       ],
       "size_tags": [
         "中小企業",
@@ -2410,7 +2448,9 @@
         "中小企業",
         "従業員数の制約なし"
       ],
-      "difficulty": 4
+      "difficulty": 4,
+      "industry_inferred": false,
+      "industry_universal": false
     },
     {
       "id": "jgrants-S-00008904",
@@ -2465,7 +2505,9 @@
       "concrete_targets": [
         "従業員数の制約なし"
       ],
-      "difficulty": 4
+      "difficulty": 4,
+      "industry_inferred": false,
+      "industry_universal": false
     },
     {
       "id": "jgrants-S-00008888",
@@ -2486,12 +2528,7 @@
       "industry_tags": [
         "IT",
         "製造業",
-        "飲食",
-        "農業",
-        "建設",
-        "小売",
-        "医療",
-        "教育"
+        "飲食"
       ],
       "size_tags": [
         "中小企業",
@@ -2533,7 +2570,9 @@
         "中小企業",
         "300名以下"
       ],
-      "difficulty": 3
+      "difficulty": 3,
+      "industry_inferred": false,
+      "industry_universal": false
     },
     {
       "id": "jgrants-S-00008881",
@@ -2587,7 +2626,9 @@
       "concrete_targets": [
         "従業員数の制約なし"
       ],
-      "difficulty": 5
+      "difficulty": 5,
+      "industry_inferred": false,
+      "industry_universal": false
     },
     {
       "id": "jgrants-S-00008879",
@@ -2608,12 +2649,7 @@
       "industry_tags": [
         "IT",
         "製造業",
-        "飲食",
-        "農業",
-        "建設",
-        "小売",
-        "医療",
-        "教育"
+        "飲食"
       ],
       "size_tags": [
         "中小企業"
@@ -2648,7 +2684,9 @@
       "concrete_targets": [
         "従業員数の制約なし"
       ],
-      "difficulty": 4
+      "difficulty": 4,
+      "industry_inferred": false,
+      "industry_universal": false
     },
     {
       "id": "jgrants-S-00008876",
@@ -2669,12 +2707,7 @@
       "industry_tags": [
         "IT",
         "製造業",
-        "飲食",
-        "農業",
-        "建設",
-        "小売",
-        "医療",
-        "教育"
+        "飲食"
       ],
       "size_tags": [
         "中小企業",
@@ -2716,7 +2749,9 @@
         "中小企業",
         "従業員数の制約なし"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "industry_inferred": false,
+      "industry_universal": false
     },
     {
       "id": "jgrants-S-00008874",
@@ -2769,7 +2804,9 @@
       "concrete_targets": [
         "従業員数の制約なし"
       ],
-      "difficulty": 4
+      "difficulty": 4,
+      "industry_inferred": false,
+      "industry_universal": false
     },
     {
       "id": "jgrants-S-00008872",
@@ -2823,7 +2860,9 @@
       "concrete_targets": [
         "従業員数の制約なし"
       ],
-      "difficulty": 1
+      "difficulty": 1,
+      "industry_inferred": false,
+      "industry_universal": false
     },
     {
       "id": "jgrants-S-00008861",
@@ -2844,10 +2883,7 @@
       "industry_tags": [
         "IT",
         "製造業",
-        "農業",
-        "建設",
-        "小売",
-        "教育"
+        "農業"
       ],
       "size_tags": [
         "中小企業"
@@ -2883,7 +2919,9 @@
         "中小企業",
         "従業員数の制約なし"
       ],
-      "difficulty": 3
+      "difficulty": 3,
+      "industry_inferred": false,
+      "industry_universal": false
     },
     {
       "id": "jgrants-S-00008855",
@@ -2901,9 +2939,7 @@
       "updated_at": "2026-05-13T02:45:45.758075+00:00",
       "is_new": true,
       "tag_status": "mocked",
-      "industry_tags": [
-        "全業種"
-      ],
+      "industry_tags": [],
       "size_tags": [
         "中小企業"
       ],
@@ -2936,7 +2972,9 @@
       "concrete_targets": [
         "従業員数の制約なし"
       ],
-      "difficulty": 5
+      "difficulty": 5,
+      "industry_inferred": true,
+      "industry_universal": false
     },
     {
       "id": "jgrants-S-00008854",
@@ -2992,7 +3030,9 @@
       "concrete_targets": [
         "従業員数の制約なし"
       ],
-      "difficulty": 5
+      "difficulty": 5,
+      "industry_inferred": false,
+      "industry_universal": false
     }
   ],
   "fetched_at": "2026-05-14T23:59:07.001042+00:00"

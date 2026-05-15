@@ -150,7 +150,7 @@
     }
   ];
 
-  // 選択肢ラベル → フィルタ値マッピング
+  // 選択肢ラベル → フィルタ値マッピング (Phase 1 / TECH_DEF §1.1: 9 カテゴリ)
   var INDUSTRY_LABEL_TO_VALUE = {
     "IT・ソフト": "IT",
     "製造業": "製造業",
@@ -160,8 +160,11 @@
     "小売・流通": "小売",
     "医療・介護": "医療",
     "教育": "教育",
-    "その他": null
+    "その他": "その他"
   };
+  // 旧スキーマ (Worker が「全業種」を返した場合) → ドロップ。
+  // 新スキーマでは「全業種」はタグ値ではなく industry_universal フィールドで表現。
+  var INDUSTRY_LEGACY_DROP = new Set(["全業種"]);
   var SIZE_LABEL_TO_VALUE = {
     "個人事業主": "個人事業主",
     "小規模事業者(〜20人)": "小規模事業者",
@@ -301,7 +304,11 @@
     if (allFreeText) {
       var interp = await interpretFreeText(allFreeText);
       if (interp) {
-        interp.industry.forEach(function (v) { if (industry.indexOf(v) === -1) industry.push(v); });
+        // Phase 1: 旧スキーマの「全業種」値はフィルタに反映しない (新スキーマでは universal フィールドで表現、Worker は未対応)
+        interp.industry.forEach(function (v) {
+          if (INDUSTRY_LEGACY_DROP.has(v)) return;
+          if (industry.indexOf(v) === -1) industry.push(v);
+        });
         interp.size.forEach(function (v) { if (size.indexOf(v) === -1) size.push(v); });
         interp.purpose.forEach(function (v) { if (purpose.indexOf(v) === -1) purpose.push(v); });
       }

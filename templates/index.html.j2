@@ -27,7 +27,8 @@
     <summary>絞り込み</summary>
     <div class="filter-group">
       <span class="filter-label">業種</span>
-      {% for tag in ["IT", "製造業", "飲食", "農業", "建設", "小売", "医療", "教育", "全業種"] %}
+      {# TECH_DEF §1.1: 9 カテゴリ。「全業種」はタグ値ではなく industry_universal フィールドで表現 #}
+      {% for tag in ["IT", "製造業", "飲食", "農業", "建設", "小売", "医療", "教育", "その他"] %}
       <label><input type="checkbox" data-filter="industry" value="{{ tag }}"> {{ tag }}</label>
       {% endfor %}
     </div>
@@ -108,6 +109,8 @@
     class="card"
     data-id="{{ s.id }}"
     data-industry="{{ s.industry_tags|join(',') }}"
+    data-industry-universal="{{ 'true' if s.industry_universal else 'false' }}"
+    data-industry-inferred="{{ 'true' if s.industry_inferred else 'false' }}"
     data-size="{{ s.size_tags|join(',') }}"
     data-purpose="{{ s.purpose_tags|join(',') }}"
     data-prefecture="{{ s.prefecture or '' }}"
@@ -121,7 +124,8 @@
       <h2 class="card-title">{{ s.title }}</h2>
     </header>
     <ul class="tag-list">
-      {% for t in s.industry_tags[:3] %}<li class="tag">{{ t }}</li>{% endfor %}
+      {% if s.industry_universal %}<li class="tag tag-universal" title="全業種対象">全業種</li>{% else %}{% for t in s.industry_tags[:3] %}<li class="tag">{{ t }}</li>{% endfor %}{% endif %}
+      {% if s.industry_inferred and not s.industry_universal %}<li class="inferred-badge" title="本文から AI が推測した業種">推測</li>{% endif %}
       {% for t in s.size_tags[:2] %}<li class="tag tag-size">{{ t }}</li>{% endfor %}
     </ul>
     <dl class="card-meta">
