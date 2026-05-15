@@ -59,6 +59,13 @@ a:hover { text-decoration: underline; }
 
 .intro h1 { margin-bottom: 0.25em; }
 .intro p { color: var(--c-muted); }
+.intro .tagline {
+  font-size: 1.15rem;
+  color: var(--c-accent);
+  margin: 4px 0 12px 0;
+  letter-spacing: 0.02em;
+}
+.intro .tagline strong { color: var(--c-accent); }
 
 .filters {
   background: #fff;

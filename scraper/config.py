@@ -34,4 +34,4 @@ WORKER_URL = "https://subsidy-interpret.kento-dev.workers.dev/interpret"
 # OGP / SNS 共有用のサイトベースURL (末尾スラなし)
 SITE_URL = "https://kento20020.github.io/subsidy-aggregator"
 SITE_NAME = "補助金まとめ"
-SITE_DESCRIPTION = "公募中の補助金をAIで要点抽出してまとめた、広告なし・会員登録不要のサイト。毎朝8時自動更新。"
+SITE_DESCRIPTION = "使える補助金、見逃さない。中小企業の経営者・事業主向けに公募中の補助金を AI が「対象/経費/書類/警告」で構造化。広告・会員登録なし。"
