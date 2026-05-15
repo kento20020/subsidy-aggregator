@@ -270,7 +270,11 @@ def run(dry_run: bool = False) -> dict:
 
     tagged = skipped = failed = 0
     for record in subsidies:
-        if record.get("tag_status") not in ("pending", "failed"):
+        status = record.get("tag_status")
+        if status == "done":
+            skipped += 1
+            continue
+        if status == "mocked" and use_mock:
             skipped += 1
             continue
 
